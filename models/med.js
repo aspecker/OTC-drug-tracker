@@ -12,10 +12,9 @@ module.exports = (sequelize, DataTypes) => {
     userId: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      unique: true,
     },
     fdaMedId: {
-      type: DataTypes.INT,
+      type: DataTypes.STRING,
       allowNull: false
     }
   });
