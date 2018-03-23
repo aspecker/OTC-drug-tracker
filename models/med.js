@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       unique: true,
     },
     fdaMedId: {
-      type: DataTypes.STRING,
+      type: DataTypes.INT,
       allowNull: false
     }
   });
