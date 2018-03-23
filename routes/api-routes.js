@@ -9,7 +9,7 @@ module.exports = function(app) {
 		res.json(results);
 	})
 	app.post("/api/add", (req, res) => {
-		drugInfo = req.body.results[0]
+		const drugInfo = req.body.results[0]
 		db.Med.create({
 			userId: db.User.id,
 			fdaMedId: drugInfo.openfda.product_ndc[0]
