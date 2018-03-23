@@ -12,11 +12,10 @@
         * set those medications to active or inactive, with data logged based on time of administration
     * search the open FDA api for the right OTC drug for you
     
-## Technology Links
+### March 23 - Planning and Setup
 
-## Resources and Information
 
-### March 22 Project Initialize Notes
+### March 22 - Project Initialize 
 * role distribution:
     * al: database- data structure and models
     * nicole: UI/front end - handlebars for our views, making the site very usable and readable
