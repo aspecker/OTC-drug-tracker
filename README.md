@@ -13,7 +13,10 @@
     * search the open FDA api for the right OTC drug for you
     
 ### March 23 - Planning and Setup
-
+* Morning
+    * al and chandler are discussing the data structure
+    * nicole is building the wireframes and converting those into html
+    
 
 ### March 22 - Project Initialize 
 * role distribution:
