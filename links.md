@@ -12,6 +12,10 @@
 
 ### General Tools
 
+### API Docs
+* here is the link to the label api that we will be using - https://open.fda.gov/drug/label/
+* sample response object : https://api.fda.gov/drug/label.json?search=openfda.product_type:otc+AND+openfda.route:nasal
+
 #### Github Tools
 * branch tutorial - https://www.atlassian.com/git/tutorials/using-branches
 * merge tutorial - https://www.atlassian.com/git/tutorials/using-branches/git-merge

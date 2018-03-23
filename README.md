@@ -16,6 +16,9 @@
 * Morning
     * al and chandler are discussing the data structure
     * nicole is building the wireframes and converting those into html
+    * adam and tim are looking into the api endpoints
+        * modelling how we want to query the api
+        * building our query strings
     
 
 ### March 22 - Project Initialize 
