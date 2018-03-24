@@ -6,13 +6,19 @@ const passport = require("../config/passport");
 module.exports = function(app) {
 
 	app.get("/api/search", (req, res) => {
-		res.json(results);
-	})
+
+		db.Med.findAll({}).then(results => {
+				console.log("This here yo\n"+res.json(results) + "\n Don't sleep");
+				res.json(results);
+		})
+	});
 	app.post("/api/add", (req, res) => {
-		const drugInfo = req.body.results[0]
+		// const drugInfo = req.body.results[0]
 		db.Med.create({
-			userId: db.User.id,
-			fdaMedId: drugInfo.openfda.product_ndc[0]
+			userId: 2,
+							//db.User.id
+			fdaMedId: "ksnadkjnaskjdnaksj"
+							//drugInfo.openfda.product_ndc[0]
 		}).then(() => {
 			//Refresh somehow
 		})
@@ -20,7 +26,8 @@ module.exports = function(app) {
 	app.get("/api/user/", (req, res) => {
 		db.Med.findAll({
 			where: {
-				userId: db.User.id
+				userId: 1
+				 				//db.User.id - dtnamic value
 			}
 		}).then(userMeds => res.json(userMeds))
 	});

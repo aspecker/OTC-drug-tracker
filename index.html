@@ -13,13 +13,24 @@
        width: 300px;
      }
     </style>
-    <button id="1" class="myBtn">get users</button>    <button  id="2" class="myBtn">get users</button>    <button id="3" class="myBtn">get users</button>
+    <button id="1" class="myBtn">test search</button>    <button  id="2" class="myBtn">test users</button>    <button id="3" class="myBtn">test add</button>
     <script type="text/javascript">
 
 
     $("#1").click(function(){
-      $.post("/api/posts/", function() {
-        console.log("post")
+      $.get("/api/search", function() {
+        console.log("search working")
+      });
+    });
+    $("#2").click(function(){
+      //needs data
+      $.get("/api/user", function() {
+        console.log("users working")
+      });
+    });
+    $("#3").click(function(){
+      $.post("/api/add", function() {
+        console.log("add working")
       });
     });
 
