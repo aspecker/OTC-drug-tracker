@@ -1,10 +1,10 @@
 /*
     OTC Tracker Project
-    
+
     Med table sequelize js
-     
-    Chandler Dibble, Al Curry  
-    March 23, 2018 
+
+    Chandler Dibble, Al Curry
+    March 23, 2018
 
 */
 module.exports = (sequelize, DataTypes) => {
@@ -17,6 +17,9 @@ module.exports = (sequelize, DataTypes) => {
     fdaMedId: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    isTaking: {
+      type: DataTypes.BOOLEAN
     }
   });
   return Med;

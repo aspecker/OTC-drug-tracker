@@ -18,7 +18,7 @@ module.exports = function(app) {
 							//db.User.id
 			fdaMedId: "ksnadkjnaskjdnaksj"
 							//drugInfo.openfda.product_ndc[0]
-		}).then(() => {
+		}).then(() => { 
 			//Refresh somehow
 		})
 	});
