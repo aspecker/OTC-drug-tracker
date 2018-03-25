@@ -13,6 +13,8 @@ passport.use(new LocalStrategy(
         email: email
       }
     }).then(function(dbUser) {
+      if (err)
+        return done(err);
       if (!dbUser) {
         return done(null, false, {
           message: "Incorrect email."

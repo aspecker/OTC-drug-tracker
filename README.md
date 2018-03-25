@@ -19,6 +19,10 @@
     * adam and tim are looking into the api endpoints
         * modelling how we want to query the api
         * building our query strings
+* NEED A USER STORY:
+    * Thomas is a 60 year lawyer at a firm that
+        * he's 
+    * he recently went in for a physical
     
 
 ### March 22 - Project Initialize 

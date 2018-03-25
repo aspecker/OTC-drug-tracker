@@ -8,7 +8,7 @@ const passport = require("./config/passport");
 
 // Set up Ports and require models
 let PORT = process.env.PORT || 8080;
-const db = require('../models');
+const db = require('./models');
 
 // set up express, session, body-parser and passport
 const app = express();
