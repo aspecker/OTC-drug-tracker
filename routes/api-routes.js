@@ -5,10 +5,9 @@ const passport = require("../config/passport");
 
 module.exports = function(app) {
 
-	app.get("/api/search", (req, res) => {
+	app.post("/api/search", (req, res) => {
 
 		db.Med.findAll({}).then(results => {
-				console.log("This here yo\n"+res.json(results) + "\n Don't sleep");
 				res.json(results);
 		})
 	});
@@ -23,7 +22,7 @@ module.exports = function(app) {
 			//Refresh somehow
 		})
 	});
-	app.get("/api/user/", (req, res) => {
+	app.post("/api/user/", (req, res) => {
 		db.Med.findAll({
 			where: {
 				userId: 1
