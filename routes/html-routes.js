@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 var path = require("path");
 
@@ -26,3 +28,4 @@ module.exports = function(app) {
 
 };
 
+>>>>>>> ba6b27263955a36d455e6995eff30999477dec55
