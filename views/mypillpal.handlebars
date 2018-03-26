@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<div class="container">
+        <!-- row 1 -->
+        <div class="row">
+            <div class="col-md-4">
+                Insert Side Nav Here
+            </div>
+            <div class="col-md-8">
+                
+                {{#each medicine}}
+                    <button type="button" data-id="{{id}}" class="btn btn-warning" data-toggle="modal" data-target="#warning">
+                        Warning
+                    </button>
+                {{/each}}
+                    
+                    {{!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#move-to-history">
+                        Move to History
+                    </button> --}}
+   
+            </div> 
+        <!-- end row 1 -->
+        </div>
+        
+        <!-- modal windows -->
+        <div class="modal fade" id="warning" role="dialog">
+            <div class="modal-dialog">
+                <!-- modal content -->
+                <div class="modal-content">
+                    <!-- modal header -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Warnings</h4>
+                    </div>
+                    <!-- modal body -->
+                    <div class="modal-body">
+                        <p>{{ message }}</p>
+                    </div>
+                    <!-- modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">I Got It</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- container div -->
+    </div> 
+    
+    <!-- <footer class="footer">
+        <div class="container">
+            <p class="text-muted">FOOTER</p>
+        </div>
+    </footer> -->
+            
+    
+    
+    
+    <!-- OTC index.js -->
+    <script src="js/mypillpal.js" type="text/javascript"></script>
+</body>
+</html>

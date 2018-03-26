@@ -1,6 +1,6 @@
 //OTC Tracker Server
 
-// require our dependancies
+// require our dependencies
 const express = require("express");
 const bodyParser = require("body-parser");
 const session = require("express-session");
@@ -18,6 +18,13 @@ app.use(express.static("public"));
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
+
+// handlebars express
+const exphbs = require("express-handlebars");
+
+// middleware establishing view engine
+app.engine("handlebars", exphbs({defaultLayout: "main"}));
+app.set("view engine", "handlebars");
 
 // require our routes
 require("./routes/html-routes.js")(app);
