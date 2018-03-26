@@ -14,6 +14,12 @@
 
 ### March 26 - Integrating Files
 * the goal today is to have all the files integrated and working in a base functional level by EoD
+    * we were not successful at this today
+    * users can login and signup
+    * users can see their meds displayed in a crude form on their myotc hub
+* functionality needed - 
+    * users need to add a medicine from the search page to their hub
+    * SOLVE ERROR of can't set headers after theyre sent
     
     
 ### March 23 - Planning and Setup

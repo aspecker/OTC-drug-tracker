@@ -8,7 +8,7 @@ module.exports = function(app) {
 	app.get("/api/meds", (req, res) => {
 
 		db.Med.findAll({where: {
-			userId: 1
+			userId: req.user.id
 		}}).then(results => {
 				res.json(results);
 		})
