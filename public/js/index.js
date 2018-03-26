@@ -25,7 +25,7 @@ $(document).ready(function() {
         email: email,
         password: password
       }).then(function(data) {
-        window.location.replace(data);
+        window.location = '/meds';
       }).catch(function(err) {
         console.log(err);
       });

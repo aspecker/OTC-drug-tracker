@@ -5,7 +5,7 @@ const passport = require("../config/passport");
 
 module.exports = function(app) {
 
-	app.post("/api/search", (req, res) => {
+	app.get("/api/meds", (req, res) => {
 
 		db.Med.findAll({where: {
 			userId: 1
