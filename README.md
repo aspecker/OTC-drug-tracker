@@ -11,6 +11,10 @@
     * keep track of their OTC medication use, with easy access to information about those drugs
         * set those medications to active or inactive, with data logged based on time of administration
     * search the open FDA api for the right OTC drug for you
+
+### March 26 - Integrating Files
+* the goal today is to have all the files integrated and working in a base functional level by EoD
+    
     
 ### March 23 - Planning and Setup
 * Morning

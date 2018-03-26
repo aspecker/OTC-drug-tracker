@@ -22,7 +22,7 @@ app.use(passport.session());
 // handlebars express
 const exphbs = require("express-handlebars");
 
-// middleware establishing view engine
+// establishing view engine
 app.engine("handlebars", exphbs({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 

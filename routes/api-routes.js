@@ -14,7 +14,7 @@ module.exports = function(app) {
 	app.post("/api/add", (req, res) => {
 		// const drugInfo = req.body.results[0]
 		db.Med.create({
-			userId: 2,
+			userId: req.user.body,
 							//db.User.id
 			fdaMedId: "ksnadkjnaskjdnaksj"
 							//drugInfo.openfda.product_ndc[0]
@@ -31,7 +31,7 @@ module.exports = function(app) {
 		}).then(userMeds => res.json(userMeds))
 	});
 	app.post("/api/login", passport.authenticate("local"), (req, res) => {
-		res.json("/members");
+		res.redirect("/meds");
 	});
 
 	app.post("/api/signup", function(req, res) {
