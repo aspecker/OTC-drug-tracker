@@ -1,23 +1,24 @@
 {
   "development": {
-    "username": "root",
-    "password": "",
-    "database": "otc_tracker",
+    "username": "otc_admin",
+    "password": "otctracker",
+    "database": "otc_db",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "port": "5432",
+    "dialect": "postgres"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "update me",
+    "password": "update me",
+    "database": "update_me",
+    "host": "update me",
+    "dialect": "update me"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "update me",
+    "password": "update me",
+    "database": "update me",
+    "host": "update me",
+    "dialect": "update me"
   }
 }

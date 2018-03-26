@@ -2,12 +2,12 @@
 
 ## Links Repository
 * use this document for putting in useful or commonly needed links
-* e.g. links to wireframe, links to documentation for key dependancies
+* e.g. links to wireframe, links to documentation for key dependencies
 
 ### Layout Docs
 
 
-### Depenancy Docs
+### Dependency Docs
 
 
 ### General Tools

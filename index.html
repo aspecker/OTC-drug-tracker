@@ -13,17 +13,18 @@
        width: 300px;
      }
     </style>
-    <button id="1" class="myBtn">test search</button>    <button  id="2" class="myBtn">test users</button>    <button id="3" class="myBtn">test add</button>
+    <button id="1" class="myBtn">test update</button>    <button  id="2" class="myBtn">test users</button>    <button id="3" class="myBtn">test add</button>
     <script type="text/javascript">
 
 
     $("#1").click(function(){
-      $.get("/api/search", function() {
-        console.log("search working")
-      });
+      $.ajax({
+        url: "/api/update",
+        type: "put",
+        dataType: "json"
+      })
     });
     $("#2").click(function(){
-      //needs data
       $.get("/api/user", function() {
         console.log("users working")
       });

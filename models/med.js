@@ -8,13 +8,16 @@
 
 */
 module.exports = (sequelize, DataTypes) => {
-  const Med = sequelize.define("Med", {
+  const Med = sequelize.define("Med",{
     userId: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      unique: true,
     },
     fdaMedId: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    brandName: {
       type: DataTypes.STRING,
       allowNull: false
     },
