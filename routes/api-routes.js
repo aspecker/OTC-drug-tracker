@@ -7,7 +7,9 @@ module.exports = function(app) {
 
 	app.post("/api/search", (req, res) => {
 
-		db.Med.findAll({}).then(results => {
+		db.Med.findAll({where: {
+			userId: 1
+		}}).then(results => {
 				res.json(results);
 		})
 	});

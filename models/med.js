@@ -18,7 +18,8 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     isTaking: {
-      type: DataTypes.BOOLEAN
+      type: DataTypes.BOOLEAN,
+      default: true
     }
   });
   return Med;

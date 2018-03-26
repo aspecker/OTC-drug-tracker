@@ -5,12 +5,15 @@
                 Insert Side Nav Here
             </div>
             <div class="col-md-8">
-                
-                {{#each medicine}}
-                    <button type="button" data-id="{{id}}" class="btn btn-warning" data-toggle="modal" data-target="#warning">
-                        Warning
-                    </button>
-                {{/each}}
+                <h3> Taking these meds</h3>
+               <ul>
+                   {{#each meds}}
+                    {{#if isTaking}}
+                    {{>meds/meds-block isTaking=true }}
+                    {{/if}}
+                    {{/each}}
+                </ul>
+                <h3> Used to take these meds</h3>
                     
                     {{!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#move-to-history">
                         Move to History
