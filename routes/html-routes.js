@@ -10,11 +10,13 @@ module.exports = function(app) {
     res.render("index");
   });
 
-  app.get("/login", function(req, res) {
+  app.get("/login", function (req, res) {
     if (req.user) {
       res.redirect("/meds");
     }
-    res.render("login");
+    else {
+      res.render("login");
+    }  
   });
 
   app.get("/meds", isAuthenticated, function(req, res) {
