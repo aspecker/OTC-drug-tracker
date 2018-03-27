@@ -28,7 +28,8 @@ module.exports = (sequelize, DataTypes) => {
     isTaking: {
       type: DataTypes.BOOLEAN,
       default: true
-    }
+    },
+    createdAt: DataTypes.DATEONLY
   });
   return Med;
 };
