@@ -71,13 +71,41 @@ $(document).ready(function() {
 });
 
 // Med Page Functions
+// Display Med Information
 const printMedInfo = (medId) =>{
     $.ajax({
-        url: `https://api.fda.gov/drug/label.json?search=openfda.product_type:otc+AND+openfda.product_ndc:${medId}`,
+        url: `https://api.fda.gov/drug/label.json?search=openfda.product_type:otc+AND+openfda.product_ndc:"${medId}"`,
         method: 'GET'
     }).then((response)=>{
         console.log(response);
-        alert(response.results[0].active_ingredient[0])
+        let drugInfo = response.results[0];
+        let brand = $(`<h4 class='infoHead'>${drugInfo.openfda.brand_name[0]}</h4>`);
+        let generic = $(`<p class='infoItem'><strong>Generic Name:</strong> ${drugInfo.openfda.generic_name[0]}</p>`);
+        let whenUsing = $(`<p class='infoItem'><strong>When Using:</strong> ${drugInfo.when_using[0]}</p>`);
+        let route = $(`<p class='infoItem'><strong>Route:</strong> ${drugInfo.openfda.route[0]}</p>`);
+        $('.modal-body').empty();
+        $('.modal-title').empty();
+        $('.modal-title').text('Drug Information');
+        $('.modal-body').append(brand,generic,route,whenUsing);
+        
+    })
+}
+const printWarning = (medId) =>{
+    $.ajax({
+        url: `https://api.fda.gov/drug/label.json?search=openfda.product_type:otc+AND+openfda.product_ndc:"${medId}"`,
+        method: 'GET'
+    }).then((response)=>{
+        console.log(response);
+        let drugInfo = response.results[0];
+        let brand = $(`<h4 class='infoHead'>${drugInfo.openfda.brand_name[0]}</h4>`);
+        let warning = $(`<p class='infoItem'><strong>Warning:</strong> ${drugInfo.warnings[0]}</p>`);
+        let askDoc = $(`<p class='infoItem'><strong>Ask Doctor:</strong> ${drugInfo.ask_doctor[0]}</p>`);
+        let doNotUse = $(`<p class='infoItem'><strong>Do Not Use:</strong> ${drugInfo.do_not_use[0]}</p>`);
+        $('.modal-body').empty();
+        $('.modal-title').empty();
+        $('.modal-title').text('Warnings');
+        $('.modal-body').append(brand,askDoc,doNotUse,warning,);
+
     })
 }
 
@@ -85,6 +113,14 @@ $('.med-btn').click(function(){
     const medId = $(this).data('id');
     console.log(medId);
     printMedInfo(medId);
+    $('#warning').modal('show');
+})
+
+$('.warn-btn').click(function(){
+    const medId = $(this).data('id');
+    console.log(medId);
+    printWarning(medId);
+    $('#warning').modal('show');
 })
 
 // SEARCH FUNCTION
