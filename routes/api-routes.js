@@ -5,24 +5,10 @@ const passport = require("../config/passport");
 
 module.exports = function(app) {
 
-	//LIST ALL SAVED MEDICATIONS
-	app.get("/api/meds", (req, res) => {
-		db.Med.findAll({
-			where: {
-				userId: req.user.id
-			}
-		}).then(results => res.json(results));
-	});
+	app.get("/api/search", (req, res) => {
 
-	//DELETES THE DESIRED MEDICATION
-	app.post("/api/retire", (req, res) => {
+		db.Med.findAll({}).then(results => res.json(results));
 
-		db.Med.destroy({
-			where: {
-				id: req.user.id,
-				fdaMedId: req.body.id
-			},
-		}).then(() => null)
 	});
 
 	//SAVE MEDICATIONS
