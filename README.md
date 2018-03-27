@@ -19,6 +19,10 @@
 * al is working on contact form
 * adam is working on med page
 * tim is wrangling the ajax calls, moving some to backend
+* EOD - core function of site is in place
+    * search, login/register, add med all working
+    * user flow is continuous around the page
+    * needs MUCH more refinement in all areas
 
 ### March 26 - Integrating Files
 * the goal today is to have all the files integrated and working in a base functional level by EoD
