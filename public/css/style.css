@@ -3,19 +3,14 @@ body {
     padding-top: 50px;
 }
 
-/* .parallax {
-    background-image: "georgia.jpg";
-    height: 250px;
+/* INDEX PAGE */
+/* --------------------------------------------- */
+.parallax {
+    background-image: url("../assets/felix.jpg");
+    height: 500px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-} */
-
-#test {
-    background-image: url("../assets/georgia.jpg");
-    height: 250px;
-    width: auto;
-    background-attachment: fixed;
 }
 
 /* nav bar */
@@ -30,7 +25,6 @@ body {
     border-bottom-color: #105dfb;
 }
 
-/* INDEX PAGE */
 .jumbotron {
     background: #105dfb;
     /* background: linear-gradient(#105dfb 80%, #fff); */
@@ -42,7 +36,6 @@ body {
 .vertical-center {
     min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
     min-height: 100vh; /* These two lines are counted as one :-)       */
-  
     display: flex;
     align-items: center;
   }
