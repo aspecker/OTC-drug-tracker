@@ -36,7 +36,35 @@
 
             <p class="text-muted">DISCLAIMER</p>
             
-            <h4 id="contact">Contact Us</h4>
+             <h4 id="contact">Contact Us</h4>  
+
+
+        <!-- Contact inputs -->
+        
+        <form method="POST" action="https://formspree.io/pillpalposse@gmail.com">
+            <div>
+                <h4 class="text-teal">Name:</h4>
+                <input type="text" name="name" placeholder="John Smith" class="full-width form-control">
+            </div>
+            <br>
+            <div>
+                <h4 class="text-teal">Email:</h4>
+                <input type="text" name="email" placeholder="example@gmail.com" class="full-width form-control">
+            </div>
+            <br>
+            <div>
+                <h4 class="text-teal">Message:</h4>
+                <textarea class="full-width form-control" name="message" cols="100" rows="5"></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="from Pillpal" />
+            <br>
+            <!-- submit button -->
+            <button class="btn btn-default submit-btn" id="submit-button">Submit</button>
+        </form>
+        <!-- End of Contact inputs -->
+        
+    </div>
+    </div>
             
         </div>
     </div class="container">
