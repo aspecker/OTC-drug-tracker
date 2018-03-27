@@ -1,3 +1,63 @@
 body {
-    padding-top: 100px;
+    /* for top nav */
+    padding-top: 50px;
 }
+
+/* .parallax {
+    background-image: "georgia.jpg";
+    height: 250px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+
+#test {
+    background-image: url("../assets/georgia.jpg");
+    height: 250px;
+    width: auto;
+    background-attachment: fixed;
+}
+
+/* nav bar */
+.nav-link {
+    color: #fff;
+    font-size: 18px;  
+}
+
+#nav-blue {
+    background-color: #105dfb;
+    color: #fff;
+    border-bottom-color: #105dfb;
+}
+
+/* INDEX PAGE */
+.jumbotron {
+    background: #105dfb;
+    /* background: linear-gradient(#105dfb 80%, #fff); */
+    color: #fff;
+    text-align: center;
+}
+
+/* centering jumbotron */
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+  
+    display: flex;
+    align-items: center;
+  }
+
+/* h1 in jumbotron */
+#jumbo {
+    font-size: 100px;
+}
+
+/* h3 header in container */
+#about, #howTo, #contact {
+    color: #105dfb;
+    font-size: 50px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+/* INDEX PAGE END */
