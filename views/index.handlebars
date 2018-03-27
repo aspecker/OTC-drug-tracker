@@ -4,7 +4,7 @@
         <h1 id="jumbo" class="animated flash">Pill Pal</h1>
             <p class="">We track your health so you don't have to.</p>
             <p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">
+                <a class="btn btn-primary btn-lg" href="/signup" role="button">
                      <i class="fas fa-search fa-lg" style="color:#fff"></i>   SEARCH MEDS</a>
                 <a class="btn btn-primary btn-lg" href="#" role="button">
                     <i class="fas fa-user fa-lg" style="color:#fff"></i>   MY PILL PAL</a>
@@ -39,10 +39,39 @@
 
             <p class="text-muted">DISCLAIMER</p>
             
-            <h4 id="contact">Contact Us</h4>
+             <h4 id="contact">Contact Us</h4>  
+
+
+        <!-- Contact inputs -->
+        
+        <form method="POST" action="https://formspree.io/pillpalposse@gmail.com">
+            <div>
+                <h4 class="text-teal">Name:</h4>
+                <input type="text" name="name" placeholder="John Smith" class="full-width form-control">
+            </div>
+            <br>
+            <div>
+                <h4 class="text-teal">Email:</h4>
+                <input type="text" name="email" placeholder="example@gmail.com" class="full-width form-control">
+            </div>
+            <br>
+            <div>
+                <h4 class="text-teal">Message:</h4>
+                <textarea class="full-width form-control" name="message" cols="100" rows="5"></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="from Pillpal" />
+            <br>
+            <!-- submit button -->
+            <button class="btn btn-default submit-btn" id="submit-button">Submit</button>
+        </form>
+        <!-- End of Contact inputs -->
+        
+    </div>
+    </div>
             
         </div>
     {{!-- close container div  --}}
     </div>
 {{!-- close parallax indep div --}}
 </div>
+

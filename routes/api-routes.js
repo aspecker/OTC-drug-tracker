@@ -6,36 +6,29 @@ const passport = require("../config/passport");
 module.exports = function(app) {
 
 	app.get("/api/meds", (req, res) => {
-
 		db.Med.findAll({where: {
-			userId: 1
+			userId: req.user.id
 		}}).then(results => {
 				res.json(results);
 		})
 	});
+
 	app.post("/api/add", (req, res) => {
-		// const drugInfo = req.body.results[0]
+		// console.log(req.body.id);
 		db.Med.create({
-			userId: req.user.body,
-							//db.User.id
-			fdaMedId: "ksnadkjnaskjdnaksj"
-							//drugInfo.openfda.product_ndc[0]
-		}).then(() => { 
-			//Refresh somehow
-		})
-	});
-	app.post("/api/user/", (req, res) => {
-		db.Med.findAll({
-			where: {
-				userId: 1
-				 				//db.User.id - dtnamic value
-			}
-		}).then(userMeds => res.json(userMeds))
-	});
-	app.post("/api/login", passport.authenticate("local"), (req, res) => {
-		res.redirect("/meds");
+			userId: req.user.id,
+			brandName: req.body.brand_name,
+			genericName: req.body.generic_name,
+			fdaMedId: req.body.id
+		}).then(() => console.log("WE DID IT"))
 	});
 
+	//PASSPORT LOGIN
+	app.post("/api/login", passport.authenticate("local"), (req, res) => {
+		res.redirect("/search");
+	});
+
+	//PASSPORT SIGNUP
 	app.post("/api/signup", function(req, res) {
 		db.User.create({
 			email: req.body.email,
@@ -53,6 +46,7 @@ module.exports = function(app) {
 		res.redirect("/");
 	});
 
+	//PASSPORT CHECKS TO MAKE SURE USER IS VALID
 	app.get("/api/user_data", function(req, res) {
 		if (!req.user) {
 			res.json({});

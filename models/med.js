@@ -17,10 +17,19 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
+    brandName:{
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    genericName:{
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     isTaking: {
       type: DataTypes.BOOLEAN,
       default: true
-    }
+    },
+    createdAt: DataTypes.DATEONLY
   });
   return Med;
 };

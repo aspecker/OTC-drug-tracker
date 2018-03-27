@@ -70,8 +70,22 @@ $(document).ready(function() {
   }
 });
 
+// Med Page Functions
+const printMedInfo = (medId) =>{
+    $.ajax({
+        url: `https://api.fda.gov/drug/label.json?search=openfda.product_type:otc+AND+openfda.product_ndc:${medId}`,
+        method: 'GET'
+    }).then((response)=>{
+        console.log(response);
+        alert(response.results[0].active_ingredient[0])
+    })
+}
 
-
+$('.med-btn').click(function(){
+    const medId = $(this).data('id');
+    console.log(medId);
+    printMedInfo(medId);
+})
 
 // SEARCH FUNCTION
 function search() {
