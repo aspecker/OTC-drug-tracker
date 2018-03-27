@@ -6,32 +6,34 @@ const passport = require("../config/passport");
 module.exports = function(app) {
 
 	app.get("/api/meds", (req, res) => {
-
 		db.Med.findAll({where: {
 			userId: req.user.id
 		}}).then(results => {
 				res.json(results);
 		})
 	});
+
 	app.post("/api/add", (req, res) => {
 		// const drugInfo = req.body.results[0]
 		db.Med.create({
 			userId: req.user.body,
 							//db.User.id
-			fdaMedId: "ksnadkjnaskjdnaksj"
+			fdaMedId: "0280-6010"
 							//drugInfo.openfda.product_ndc[0]
 		}).then(() => { 
 			//Refresh somehow
 		})
 	});
+
 	app.post("/api/user/", (req, res) => {
 		db.Med.findAll({
 			where: {
-				userId: 1
+				userId: req.user.id
 				 				//db.User.id - dtnamic value
 			}
 		}).then(userMeds => res.json(userMeds))
 	});
+
 	app.post("/api/login", passport.authenticate("local"), (req, res) => {
 		res.redirect("/meds");
 	});
