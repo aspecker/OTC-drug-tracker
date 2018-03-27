@@ -87,6 +87,8 @@ $('.med-btn').click(function(){
     printMedInfo(medId);
 })
 
+
+
 // SEARCH FUNCTION
 function search() {
     $("#warnings").html('');

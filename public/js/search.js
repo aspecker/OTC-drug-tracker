@@ -37,7 +37,9 @@ $('#searchBtn').on('click', function() {
 				// parsedhttps://api.fda.gov/drug/label.json?search=openfda.product_type:otc+AND+brand_name:${searchTerm}&limit=5`Data.push([brandName, genericName, route, whenUsing, purpose, doseAdmin, activeIngredient, question]);
 				// parsedData.push([brandName, genericName]);
 				// console.log(brandName)
-			});
+			}).then(function(response){
+				
+			})
 			check();
 			// console.log(parsedData);
 			// document.write(parsedData);
