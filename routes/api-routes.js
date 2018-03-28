@@ -23,17 +23,7 @@ module.exports = function(app) {
 		}).then(() => console.log("WE DID IT"))
 	});
 
-	//PASSPORT LOGIN
-/* 	app.post("/api/login", passport.authenticate("local"), (req, res) => {
-		res.redirect("/search");
-	}); */
-
-/* app.post('api/login',
-  passport.authenticate('local', { successRedirect: '/search',
-                                   failureRedirect: 'api/login',
-                                   failureFlash: true })
-);
- */
+//PASSPORT LOGIN
 app.post('/api/login', function(req, res, next) {
     passport.authenticate('local', function (err, user, info) {
       //console.log(err, user, info);
