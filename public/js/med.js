@@ -47,7 +47,7 @@ const deleteMed = (medId)=>{
     }).then(()=>{
         $('.modal-body').empty();
         $('.modal-title').empty();
-        $('.modal-body').append(`<h2>Medicine ${medId} deleted from your records.`);
+        $('.modal-body').append(`<h2>Medicine deleted from your records.`);
     })
 }
 
