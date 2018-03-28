@@ -24,10 +24,38 @@ module.exports = function(app) {
 	});
 
 	//PASSPORT LOGIN
-	app.post("/api/login", passport.authenticate("local"), (req, res) => {
+/* 	app.post("/api/login", passport.authenticate("local"), (req, res) => {
 		res.redirect("/search");
-	});
+	}); */
 
+/* app.post('api/login',
+  passport.authenticate('local', { successRedirect: '/search',
+                                   failureRedirect: 'api/login',
+                                   failureFlash: true })
+);
+ */
+app.post('/api/login', function(req, res, next) {
+    passport.authenticate('local', function (err, user, info) {
+      //console.log(err, user, info);
+        if (err) { 
+          return res.status(400).json({err}); // will generate a 500 error
+      }
+	  // Generate a JSON response reflecting authentication status
+		
+      if (!user) {
+        return res.status(400).json({error: 'authentication failed'}); 
+      }
+      req.login(user, loginErr => {
+        if (loginErr) {
+          return next(loginErr);
+        }
+        // res.send("success" );
+        res.json("/search");
+      });      
+    })(req, res, next);
+
+});
+	
 	//PASSPORT SIGNUP
 	app.post("/api/signup", function(req, res) {
 		db.User.create({
@@ -37,7 +65,8 @@ module.exports = function(app) {
 			res.redirect(307, "/api/login");
 		}).catch(function(err) {
 			console.log(err);
-			res.json(err);
+			//res.json(err);
+			return res.status(400).json({err}); 
 		});
 	});
 

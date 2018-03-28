@@ -54,3 +54,8 @@ body {
 }
 
 /* INDEX PAGE END */
+
+/* text color for login error messages - class in login.handlebars */
+.message {
+    color: red;
+  }
