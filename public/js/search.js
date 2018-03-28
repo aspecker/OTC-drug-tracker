@@ -34,7 +34,7 @@ const check = () => {
 	});
 }
 $('#searchBtn').on('click', async function() {
-
+	$("#searchResults").empty();
 	let searchTerm = $('#fdaSearch').val();
 	console.log(searchTerm);
 	$.get(`https://api.fda.gov/drug/label.json?search=openfda.product_type:otc+AND+brand_name:${searchTerm}&limit=5`,
