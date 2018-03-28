@@ -6,7 +6,6 @@ body {
 /* INDEX PAGE */
 /* --------------------------------------------- */
 .parallax {
-    background-image: url("../assets/felix.jpg");
     height: 500px;
     background-attachment: fixed;
     background-position: center;
@@ -54,3 +53,10 @@ body {
 }
 
 /* INDEX PAGE END */
+
+/* Main Page Handlebars */
+#footer {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+}
