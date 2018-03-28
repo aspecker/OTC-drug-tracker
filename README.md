@@ -4,7 +4,7 @@
 ### Chandler Dibble, Nicole Yoon, Al Curry, Tim Hill, Adam Specker
 
 # Overview
-An application built to help consumers find and keep track of over-the-counter drugs they currently use and have taken
+An application built to help consumers find and keep track of over-the-counter drugs they currently use and have taken.
 
 **Please visit out application here: 
 
@@ -22,32 +22,32 @@ People young and old whether they take large or small amounts of medicines, need
         * Medications set to active or inactive, with data logged based on time of administration by user
     * User will hahve ability to Search the open FDA api for a particular medicine with information about it:
     
-    *Brand Name
-    *Generic Name
-    *NDC Number
-    *Warnings
-      *General
-      *Pregnancy
-      *Etc. 
-    *Ingredients
-    *Route
-    *Dosage and Administration
-    *Purpose
-    *And more!
+    * Brand Name
+    * Generic Name
+    * NDC Number
+    * Warnings
+      * General
+      * Pregnancy
+      * Etc. 
+    * Ingredients
+    * Route
+    * Dosage and Administration
+    * Purpose
+    * And more!
 
 **Dependecies used:
 
-    *bcrypt-nodejs
-    *body-parser
-    *dotenv
-    *express
-    *express-handlebars
-    *express-session
-    *mysql
-    *mysql2
-    *passport
-    *passport-local
-    *sequelize
+    * bcrypt-nodejs
+    * body-parser
+    * dotenv
+    * express
+    * express-handlebars
+    * express-session
+    * mysql
+    * mysql2
+    * passport
+    * passport-local
+    * sequelize
     
 ### March 28 - Fine Tuning the Application
 * Add/archive drug toggle functionality for user
