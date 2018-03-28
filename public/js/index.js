@@ -81,13 +81,13 @@ const printMedInfo = (medId) =>{
         let drugInfo = response.results[0];
         let brand = $(`<h4 class='infoHead'>${drugInfo.openfda.brand_name[0]}</h4>`);
         let generic = $(`<p class='infoItem'><strong>Generic Name:</strong> ${drugInfo.openfda.generic_name[0]}</p>`);
-        let purpose = $(`<p class='infoItem'><strong>Route:</strong> ${drugInfo.openfda.route[0]}</p>`);
-        let whenUsing = $(`<p class='infoItem'><strong>When Using:</strong> ${drugInfo.when_using[0]}</p>`);
+        let doseAdmin = $(`<p class='infoItem'><strong>Dosage/Administration:</strong> ${drugInfo.dosage_and_administration[0]}</p>`);
+        let indication = $(`<p class='infoItem'><strong>Indication:</strong> ${drugInfo.indications_and_usage[0]}</p>`);
         let route = $(`<p class='infoItem'><strong>Route:</strong> ${drugInfo.openfda.route[0]}</p>`);
         $('.modal-body').empty();
         $('.modal-title').empty();
         $('.modal-title').text('Drug Information');
-        $('.modal-body').append(brand,generic,route,whenUsing);
+        $('.modal-body').append(brand,generic,doseAdmin,indication,route);
         
     })
 }
@@ -110,6 +110,17 @@ const printWarning = (medId) =>{
 
     })
 }
+// delete medicine
+const deleteMed = (medId)=>{
+    $.ajax({
+        url: `/api/meds/${medId}`,
+        method: 'DELETE'
+    }).then(()=>{
+        $('.modal-body').empty();
+        $('.modal-title').empty();
+        $('.modal-body').append(`<h2>Medicine ${medId} deleted from your records.`);
+    })
+}
 
 // mirrored med and warn button on clicks 
 $('.med-btn').click(function(){
@@ -124,6 +135,18 @@ $('.warn-btn').click(function(){
     console.log(medId);
     printWarning(medId);
     $('#warning').modal('show');
+})
+
+// delete button functionality
+$('.delete-btn').click(function(){
+    const medId = $(this).data('id');
+    console.log(medId);
+    deleteMed(medId);
+    $('#warning').modal('show');
+    $('#warning').on('hidden.bs.modal',()=>{
+        window.location.reload();
+    })
+
 })
 
 // SEARCH FUNCTION

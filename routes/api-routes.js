@@ -10,7 +10,7 @@ module.exports = function(app) {
 		db.Med.findAll({where: {
 			userId: req.user.id
 		}}).then(results => {
-				res.json(results);
+			res.json(results);
 		})
 	});
 
@@ -21,11 +21,20 @@ module.exports = function(app) {
 			brandName: req.body.brand_name,
 			genericName: req.body.generic_name,
 			fdaMedId: req.body.id
-		}).then(() => console.log(`${req.user.id} has added ${req.body.id} medicine to database`))
+		}).then(() => console.log(`${req.user.id} has added medicine with NDC ${req.body.id} to database`))
 	});
 
-	//retire a medicine to the history
-	// app.put('/api/meds')
+	app.delete('/api/meds/:id', (req,res)=>{
+		db.Med.destroy({
+			where: {
+				fdaMedId: req.params.id
+			}
+		}).then((response)=>{
+			console.log(response)
+			console.log(`User ${req.user.id} has deleted medicine with NDC ${req.params.id} from database`);
+			res.sendStatus(response ? 200 : 500);
+		})
+	})
 
 
 	//local login
