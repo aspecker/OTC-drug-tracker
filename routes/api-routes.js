@@ -24,6 +24,10 @@ module.exports = function(app) {
 		}).then(() => console.log(`${req.user.id} has added ${req.body.id} medicine to database`))
 	});
 
+	//retire a medicine to the history
+	// app.put('/api/meds')
+
+
 	//local login
 	app.post("/api/login", passport.authenticate("local"), (req, res) => {
 		res.redirect("/search");

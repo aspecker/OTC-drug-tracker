@@ -81,6 +81,7 @@ const printMedInfo = (medId) =>{
         let drugInfo = response.results[0];
         let brand = $(`<h4 class='infoHead'>${drugInfo.openfda.brand_name[0]}</h4>`);
         let generic = $(`<p class='infoItem'><strong>Generic Name:</strong> ${drugInfo.openfda.generic_name[0]}</p>`);
+        let purpose = $(`<p class='infoItem'><strong>Route:</strong> ${drugInfo.openfda.route[0]}</p>`);
         let whenUsing = $(`<p class='infoItem'><strong>When Using:</strong> ${drugInfo.when_using[0]}</p>`);
         let route = $(`<p class='infoItem'><strong>Route:</strong> ${drugInfo.openfda.route[0]}</p>`);
         $('.modal-body').empty();
@@ -90,6 +91,7 @@ const printMedInfo = (medId) =>{
         
     })
 }
+// mirrors medInfo, displays modal for warning
 const printWarning = (medId) =>{
     $.ajax({
         url: `https://api.fda.gov/drug/label.json?search=openfda.product_type:otc+AND+openfda.product_ndc:"${medId}"`,
@@ -109,6 +111,7 @@ const printWarning = (medId) =>{
     })
 }
 
+// mirrored med and warn button on clicks 
 $('.med-btn').click(function(){
     const medId = $(this).data('id');
     console.log(medId);
