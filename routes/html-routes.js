@@ -5,10 +5,14 @@ const db = require("../models");
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function(app) {
+  const checkUser = (req) => {
+    console.log(req.user ? req.user.email : "Sign In");
+    return req.user ? req.user.email : "Sign In";
+  }
 
   // renders index on root
   app.get("/", function(req, res) {
-    res.render("index");
+    res.render("index", {username: checkUser(req)});
   });
 
   //login route with redirect to meds
@@ -18,7 +22,7 @@ module.exports = function(app) {
     }
     else {
       res.render("login");
-    }  
+    }
   });
 
   // signup page route
@@ -34,6 +38,7 @@ module.exports = function(app) {
 		}}).then(results => {
     // renders user meds using handlebars partial
     res.render('mypillpal', {
+      username : checkUser(req),
       meds: results
     });
     });
@@ -45,4 +50,3 @@ module.exports = function(app) {
   })
 
 };
-

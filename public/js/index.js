@@ -3,23 +3,23 @@ $(document).ready(function() {
     var loginForm = $("form.login");
     var emailInput = $("input#email-input");
     var passwordInput = $("input#password-input");
-  
+
     loginForm.on("submit", function(event) {
       event.preventDefault();
       var userData = {
         email: emailInput.val().trim(),
         password: passwordInput.val().trim()
       };
-  
+
       if (!userData.email || !userData.password) {
         return;
       }
-  
+
       loginUser(userData.email, userData.password);
       emailInput.val("");
       passwordInput.val("");
     });
-  
+
     function loginUser(email, password) {
       $.post("/api/login", {
         email: email,
@@ -30,7 +30,7 @@ $(document).ready(function() {
         console.log(err);
       });
     }
-  
+
   });
 
 // SIGN UP FUNCTION
@@ -174,7 +174,7 @@ function search() {
         },
         type: 'GET'
     });
-    
+
         $.ajax({
         url: "https://api.fda.gov/drug/label.json?search=openfda.product_type:otc+AND+brand_name:" +
             searchTerm + "&limit=5",
@@ -200,12 +200,12 @@ function search() {
 
 
 
-// MY PILL PAL 
+// MY PILL PAL
 // modal
 $(function() {
     $("#btnWarning").on("click", function(event) {
         var medicine = $(this).data("id");
-        
+
         $.ajax({
             url: url,
             method: "GET"

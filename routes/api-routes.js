@@ -13,8 +13,18 @@ module.exports = function(app) {
 			res.json(results);
 		})
 	});
-
-	// create a medicine in the database for current user based on search term input
+	//
+	app.put("/api/retire", function(req, res) {
+		console.log(req.body);
+		db.Med.update(req.body, {
+			where: {
+				userId: req.user.id,
+				fdaMedId: req.body.medId
+			}
+		}).then(response => res.send(response));
+	});
+	
+	//SAVE MEDICATIONS
 	app.post("/api/add", (req, res) => {
 		db.Med.create({
 			userId: req.user.id,
