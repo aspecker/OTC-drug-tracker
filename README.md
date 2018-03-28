@@ -39,15 +39,15 @@ People young and old whether they take large or small amounts of medicines, need
 
     *bcrypt-nodejs
     *body-parser
-    *dotenv": "^5.0.1",
-    *express": "^4.16.3",
-    *express-handlebars": "^3.0.0",
-    *express-session": "^1.15.6",
-    *mysql": "^2.15.0",
-    *mysql2": "^1.5.3",
-    *passport": "^0.4.0",
-    *passport-local": "^1.0.0",
-    *sequelize": "^4.37.4"
+    *dotenv
+    *express
+    *express-handlebars
+    *express-session
+    *mysql
+    *mysql2
+    *passport
+    *passport-local
+    *sequelize
 
 
     
