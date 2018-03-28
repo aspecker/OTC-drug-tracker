@@ -1,3 +1,26 @@
+const upperCase = (value) => {
+	// Build up result.
+	var result = "";
+	// Loop over string indexes.
+	for (var i = 0; i < value.length; i++) {
+		// Get char code at this index.
+		var code = value.charCodeAt(i);
+		// For first character, or a lowercase range char following a space.
+		// ... The value 97 means lowercase A, 122 means lowercase Z.
+		if (i === 0 ||
+			value[i - 1] === " " &&
+			code >= 97 &&
+			code <= 122) {
+			// Convert from lowercase to uppercase by subtracting 32.
+			// ... This uses ASCII values.
+			result += String.fromCharCode(code - 32);
+		} else {
+			result += value[i];
+		}
+	}
+	return result;
+}
+//
 const check = () => {
 	$('.add-btn').on('click', function() {
 		var medArr = this.value.split('^');
@@ -19,8 +42,8 @@ $('#searchBtn').on('click', async function() {
 			let obj = req.results;
 			// let parsedData = [];
 			Object.keys(obj).forEach(function(key) {
-				let brandName = obj[key].openfda.brand_name[0].toUpperCase();
-				let genericName = obj[key].openfda.generic_name[0].toUpperCase();
+				let brandName = upperCase(obj[key].openfda.brand_name[0].toLowerCase());
+				let genericName = upperCase(obj[key].openfda.generic_name[0].toLowerCase());
 				let route = obj[key].openfda.route[0];
 				// let whenUsing = obj[key].when_using[0];
 				let purpose = obj[key].purpose[0];
