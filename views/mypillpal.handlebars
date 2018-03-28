@@ -2,7 +2,7 @@
         <!-- row 1 -->
         <div class="row">
             <div class="col-md-6">
-                <h3> Currently Taking</h3>
+                <h2 class='med-head'>Currently Taking</h2>
                    {{#each meds}}
                     {{#if isTaking}}
                     {{>meds/meds-block}}
@@ -11,7 +11,7 @@
             </div>
 
             <div class="col-md-6">
-                <h3> History</h3>
+                <h2 class='med-head'>History</h2>
                     {{#each meds}}
                     {{#unless isTaking}}
                     {{>meds/history-block}}
