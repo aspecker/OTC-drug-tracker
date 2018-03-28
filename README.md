@@ -34,6 +34,21 @@ People young and old whether they take large or small amounts of medicines, need
          *Purpose
          *And more!
 
+##Dependeices used:
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.3",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "sequelize": "^4.37.4"
+
+
+    
 ### March 27 - Adding on Core Functions
 * basic site flow and functionality is in place
 * nicole is adding css and design elements
