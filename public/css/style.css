@@ -57,17 +57,17 @@ body {
 /* INDEX PAGE END */
 
 .med-block{
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     padding-left: 10px;
     padding-bottom: 10px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     line-height: 1.6em;
     border: 2px solid lightslategray;
     border-radius: 10px;
     background-color: #f5f5f5;
 }
 .info{
-    margin: 0px 10px 0px 0px;
+    margin: 0px 20px 0px 0px;
 }
 .med-head{
     text-align: center;
@@ -75,8 +75,21 @@ body {
     background-color: blue;
     color: white;
     padding: 10px 0px 10px 0px;
-    font-weight: 700;
+    font-weight: 500;
+    border-radius: 10px;
+    border: 2px solid lightslategray;
+
 }
 .med-name{
     text-align: center;
+}
+.med-btn{
+    margin-left: 50px;
+}
+.med-date{
+    text-align: center;
+    font-style: italic;
+}
+.btn-secondary:hover{
+    background-color: lightslategray;
 }
