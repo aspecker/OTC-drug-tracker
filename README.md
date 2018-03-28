@@ -8,13 +8,13 @@
 
 *Please visit out application here: 
 
-Real World Problem:
+##Real World Problem:
 
 People young and old whether they take large or small amounts of medicines, need to keep track of them. For years people have attended doctors offices for their regular checks or for other cases and could not provide their with an appropriate respoinses in regards to their recents medine intake. There is a need for a pill tracking application that allows users to keep track fo the drugs they are currently taking and keep those historicals even after they stop such. User will have ability to pull up this information right from their phone to ensure they can provide their doctor or simply themselves of their medicine intake. Staying health and furthermore keeping track of ones helath is of utmost important in life and pill pal helps managing that easier. 
 
-How can we solve this?
+##How can we solve this?
 
-Utilize an MVC model app using a database with profile capabilities and the FDA open api to allow users to:
+#Utilize an MVC model app using a database with profile capabilities and the FDA open api to allow users to:
     * User ability to create account with encrypted password for security
       *Login and logout capability
     * Keep track of their OTC medication use, with easy access to information about those drugs
