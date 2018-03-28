@@ -10,7 +10,7 @@ const check = () => {
 		}, () => null)
 	});
 }
-$('#searchBtn').on('click', function() {
+$('#searchBtn').on('click', async function() {
 
 	let searchTerm = $('#fdaSearch').val();
 	console.log(searchTerm);
@@ -33,14 +33,9 @@ $('#searchBtn').on('click', function() {
 				$("#searchResults").append(
 					`<tr><td>${brandName}</td><td>${genericName}</td><td>${purpose}</td><td>${doseAdmin}</td><td>${activeIngredient}</td><td><button class="add-btn btn btn-danger btn-block" id="${key}" value='${pullData}'>Click</button></td></tr><hr>`
 				);
-				// $(`#${key}`).data('savedMed', {brand_name: brandName, generic_name: genericName, rout: route} );
-				// parsedhttps://api.fda.gov/drug/label.json?search=openfda.product_type:otc+AND+brand_name:${searchTerm}&limit=5`Data.push([brandName, genericName, route, whenUsing, purpose, doseAdmin, activeIngredient, question]);
-				// parsedData.push([brandName, genericName]);
-				// console.log(brandName)
+
 			});
 			check();
-			// console.log(parsedData);
-			// document.write(parsedData);
 		})
 
 })
