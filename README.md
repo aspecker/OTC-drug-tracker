@@ -15,12 +15,12 @@ People young and old whether they take large or small amounts of medicines, need
 **How can we solve this?
 
    Utilize an MVC model app using a database with profile capabilities and the FDA open api to allow users to:
-    * User ability to create account with encrypted password for security
-      *Login and logout capability
+    * Create account with encrypted password
+      * Login and logout capability
     * Keep track of their OTC medication use, with easy access to information about those drugs
-        * Profile page with two seperate data sets of active and historical medicnes taken
-        * These medications to active or inactive, with data logged based on time of administration by user
-    * User will hahve ability to Search the open FDA api for a particular medicone with information about it:
+        * Profile page with two seperate data sets of active and historical medicines taken
+        * Medications set to active or inactive, with data logged based on time of administration by user
+    * User will hahve ability to Search the open FDA api for a particular medicine with information about it:
     
     *Brand Name
     *Generic Name
@@ -35,7 +35,7 @@ People young and old whether they take large or small amounts of medicines, need
     *Purpose
     *And more!
 
-**Dependeices used:
+**Dependecies used:
 
     *bcrypt-nodejs
     *body-parser
@@ -48,8 +48,23 @@ People young and old whether they take large or small amounts of medicines, need
     *passport
     *passport-local
     *sequelize
-
-
+    
+### March 28 - Fine Tuning the Application
+* Add/archive drug toggle functionality for user
+* updated search fields for cleaner data delivery
+* Fine tuning handlebars structure and client side interaction
+   * auto focus on text fields
+   * keyboard (enter) to trigger actions or data calls
+* Error notifications
+   * Search (misspellings)
+   * Email (incorrect email)
+   * Sign up / Email (Duplicates not allowed, notifcation to inform user if email is already taken)
+   * Logout (log out alert)
+   * Login (log in alert)
+* Modals
+   * Opportunity for users to access additional informaiton about drug in profile
+      * Active Ingredients
+      * General Warnings
     
 ### March 27 - Adding on Core Functions
 * basic site flow and functionality is in place
