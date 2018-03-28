@@ -45,16 +45,14 @@ $('#searchBtn').on('click', async function() {
 				let brandName = upperCase(obj[key].openfda.brand_name[0].toLowerCase());
 				let genericName = upperCase(obj[key].openfda.generic_name[0].toLowerCase());
 				let route = obj[key].openfda.route[0];
-				// let whenUsing = obj[key].when_using[0];
 				let purpose = obj[key].purpose[0];
 				let doseAdmin = obj[key].dosage_and_administration[0];
 				let activeIngredient = obj[key].active_ingredient[0];
-				// let question = obj[key].questions[0];
 				let fdaMedId = obj[key].openfda.product_ndc[0];
 				let pullData = [`${fdaMedId}^${brandName}^${genericName}^${activeIngredient}`];
 				console.log(pullData);
 				$("#searchResults").append(
-					`<tr><td>${brandName}</td><td>${genericName}</td><td>${purpose}</td><td>${doseAdmin}</td><td>${activeIngredient}</td><td><button class="add-btn btn btn-danger btn-block" id="${key}" value='${pullData}'>Click</button></td></tr><hr>`
+					`<tr><td>${brandName}</td><td>${genericName}</td><td>${purpose}</td><td>${doseAdmin}</td><td>${activeIngredient}</td><td><button class="add-btn btn btn-danger btn-block" id="${key}" value='${pullData}'>Click</button></td></tr><`
 				);
 
 			});
