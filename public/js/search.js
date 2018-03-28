@@ -60,3 +60,9 @@ $('#searchBtn').on('click', async function() {
 		})
 
 })
+
+$('#fdaSearch').keypress(function(e){
+	if(e.which == 13){//Enter key pressed
+		$('#searchBtn').click();//Trigger search button click event
+	}
+});
