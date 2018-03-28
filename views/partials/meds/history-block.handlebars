@@ -1,9 +1,9 @@
 <div class='med-block'>
-    <p>{{brandName}}</p>
-    <p>Taking since {{createdAt}}</p>
+    <h4 class='med-name'>{{brandName}}</h4>
+    <p class='med-name'>Added on {{createdAt}}</p>
     
-    <button class='med-btn btn btn-info' data-id={{fdaMedId}}>Information</button>
-    <button class='warn-btn btn btn-warning' data-id={{fdaMedId}}>Warnings</button>
-    <button class='retire-btn btn btn-secondary' value ="{{fdaMedId}},{{isTaking}}">Send to Active</button>
-    <button class ='delete-btn btn btn-danger' data-id={{fdaMedId}}><strong>X</strong></button>
+    <button class='info med-btn btn btn-info' data-id={{fdaMedId}}>Information</button>
+    <button class='info warn-btn btn btn-warning' data-id={{fdaMedId}}>Warnings</button>
+    <button class='info retire-btn btn btn-secondary' value ="{{fdaMedId}},{{isTaking}}">Send to Active</button>
+    <button class ='info delete-btn btn btn-danger' data-id={{fdaMedId}}><strong>X</strong></button>
 </div>
