@@ -10,14 +10,22 @@ module.exports = function(app) {
 		db.Med.findAll({}).then(results => res.json(results));
 
 	});
-
+	//
+	app.put("/api/retire", function(req, res) {
+		console.log(req.body);
+		db.Med.update(req.body, {
+				where: {
+					userId: req.user.id,
+					fdaMedId: req.body.medId
+				}
+			}).then(response => res.send(response));
+	});
 	//SAVE MEDICATIONS
 	app.post("/api/add", (req, res) => {
-		// console.log(req.body.id);
 		db.Med.create({
 			userId: req.user.id,
-			brandName: req.body.brand_name,
-			genericName: req.body.generic_name,
+			brandName: req.body.brand_name.toUpperCase(),
+			genericName: req.body.generic_name.toUpperCase(),
 			fdaMedId: req.body.id
 		}).then(() => console.log("WE DID IT"))
 	});

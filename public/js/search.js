@@ -19,8 +19,8 @@ $('#searchBtn').on('click', async function() {
 			let obj = req.results;
 			// let parsedData = [];
 			Object.keys(obj).forEach(function(key) {
-				let brandName = obj[key].openfda.brand_name[0];
-				let genericName = obj[key].openfda.generic_name[0];
+				let brandName = obj[key].openfda.brand_name[0].toUpperCase();
+				let genericName = obj[key].openfda.generic_name[0].toUpperCase();
 				let route = obj[key].openfda.route[0];
 				// let whenUsing = obj[key].when_using[0];
 				let purpose = obj[key].purpose[0];
