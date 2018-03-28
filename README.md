@@ -12,6 +12,14 @@
         * set those medications to active or inactive, with data logged based on time of administration
     * search the open FDA api for the right OTC drug for you
 
+### March 27 - Adding on Core Functions
+* basic site flow and functionality is in place
+* nicole is adding css and design elements
+* chandler is working on the search function integrated into site flow
+* al is working on contact form
+* adam is working on med page
+* tim is wrangling the ajax calls, moving some to backend
+
 ### March 26 - Integrating Files
 * the goal today is to have all the files integrated and working in a base functional level by EoD
     * we were not successful at this today

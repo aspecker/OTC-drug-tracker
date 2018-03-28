@@ -5,10 +5,12 @@ const passport = require("../config/passport");
 
 module.exports = function(app) {
 
-	app.get("/api/search", (req, res) => {
-
-		db.Med.findAll({}).then(results => res.json(results));
-
+	app.get("/api/meds", (req, res) => {
+		db.Med.findAll({where: {
+			userId: req.user.id
+		}}).then(results => {
+				res.json(results);
+		})
 	});
 	//
 	app.put("/api/retire", function(req, res) {

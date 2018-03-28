@@ -14,18 +14,22 @@ module.exports = function(app) {
     res.render("index", {username: checkUser(req)});
   });
 
-  app.get("/login", function(req, res) {
+  app.get("/login", function (req, res) {
     if (req.user) {
-      res.redirect("/meds");
+      return res.redirect("/meds");
     }
     else {
       res.render("login");
     }
   });
 
+  app.get('/signup', (req,res)=>{
+    res.render('signup')
+  })
+
   app.get("/meds", isAuthenticated, function(req, res) {
     db.Med.findAll({where: {
-			userId: 1
+			userId: req.user.id
 		}}).then(results => {
     res.render('mypillpal', {
       username : checkUser(req),
