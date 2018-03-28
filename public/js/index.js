@@ -70,3 +70,8 @@ $(document).ready(function() {
   }
 });
 
+$('.med-btn').keypress(function(e){
+	if(e.which == 13){//Enter key pressed
+		$('#signup').click();//Trigger search button click event
+	}
+});
