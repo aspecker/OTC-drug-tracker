@@ -5,30 +5,44 @@ const passport = require("../config/passport");
 
 module.exports = function(app) {
 
+	// return all meds for current user from database
 	app.get("/api/meds", (req, res) => {
 		db.Med.findAll({where: {
 			userId: req.user.id
 		}}).then(results => {
-				res.json(results);
+			res.json(results);
 		})
 	});
 
+	// create a medicine in the database for current user based on search term input
 	app.post("/api/add", (req, res) => {
-		// console.log(req.body.id);
 		db.Med.create({
 			userId: req.user.id,
 			brandName: req.body.brand_name,
 			genericName: req.body.generic_name,
 			fdaMedId: req.body.id
-		}).then(() => console.log("WE DID IT"))
+		}).then(() => console.log(`${req.user.id} has added medicine with NDC ${req.body.id} to database`))
 	});
 
-	//PASSPORT LOGIN
+	app.delete('/api/meds/:id', (req,res)=>{
+		db.Med.destroy({
+			where: {
+				fdaMedId: req.params.id
+			}
+		}).then((response)=>{
+			console.log(response)
+			console.log(`User ${req.user.id} has deleted medicine with NDC ${req.params.id} from database`);
+			res.sendStatus(response ? 200 : 500);
+		})
+	})
+
+
+	//local login
 	app.post("/api/login", passport.authenticate("local"), (req, res) => {
 		res.redirect("/search");
 	});
 
-	//PASSPORT SIGNUP
+	//local signup
 	app.post("/api/signup", function(req, res) {
 		db.User.create({
 			email: req.body.email,
@@ -41,21 +55,10 @@ module.exports = function(app) {
 		});
 	});
 
+	//logout current user
 	app.get("/logout", function(req, res) {
 		req.logout();
 		res.redirect("/");
-	});
-
-	//PASSPORT CHECKS TO MAKE SURE USER IS VALID
-	app.get("/api/user_data", function(req, res) {
-		if (!req.user) {
-			res.json({});
-		} else {
-			res.json({
-				email: req.user.email,
-				id: req.user.id
-			});
-		}
 	});
 
 };

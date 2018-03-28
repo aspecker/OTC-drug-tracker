@@ -1,6 +1,9 @@
-<div>
-    <p>Brand Name: {{brandName}}</p>
-    <p>Medicine ID:{{fdaMedId}}</p>
-    <button class='med-btn btn' data-id={{fdaMedId}}>More Info!</button>
-    <br>
+<div class='med-block'>
+    <p>{{brandName}}</p>
+    <p>Taking since {{createdAt}}</p>
+    
+    <button class='med-btn btn btn-info' data-id={{fdaMedId}}>Information</button>
+    <button class='warn-btn btn btn-warning' data-id={{fdaMedId}}>Warnings</button>
+    <button class='retire-btn btn btn-secondary' data-id={{fdaMedId}}>Send to History</button>
+    <button class ='delete-btn btn btn-danger' data-id={{fdaMedId}}><strong>X</strong></button>
 </div>

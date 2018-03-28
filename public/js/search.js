@@ -10,6 +10,7 @@ const check = () => {
 		}, () => null)
 	});
 }
+
 $('#searchBtn').on('click', function() {
 
 	let searchTerm = $('#fdaSearch').val();
