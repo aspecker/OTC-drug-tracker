@@ -6,7 +6,7 @@
 # Overview
 An application built to help consumers find and keep track of over-the-counter drugs they currently use and have taken.
 
-**Please visit out application here: 
+**Please visit out application here: http://pill-pal-pro.herokuapp.com/search
 
 **Real World Problem:
 
