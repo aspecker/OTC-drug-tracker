@@ -366,3 +366,9 @@ td {
 .message {
     color: red;
   }
+
+  #error{
+      color: red;
+      font-size: 1.5em;
+      text-align: center;
+  }
