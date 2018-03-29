@@ -1,18 +1,12 @@
+// handles variable casing for adding brand name to the dbcol-sm-6
 const upperCase = (value) => {
-	// Build up result.
 	let result = "";
-	// Loop over string indexes.
 	for (let i = 0; i < value.length; i++) {
-		// Get char code at this index.
 		var code = value.charCodeAt(i);
-		// For first character, or a lowercase range char following a space.
-		// ... The value 97 means lowercase A, 122 means lowercase Z.
 		if (i === 0 ||
 			value[i - 1] === " " &&
 			code >= 97 &&
 			code <= 122) {
-			// Convert from lowercase to uppercase by subtracting 32.
-			// ... This uses ASCII values.
 			result += String.fromCharCode(code - 32);
 		} else {
 			result += value[i];
@@ -20,7 +14,7 @@ const upperCase = (value) => {
 	}
 	return result;
 }
-//
+
 const check = () => {
 	$.get('/api/check', (data, status) => {
 		if (!data) {
@@ -29,9 +23,13 @@ const check = () => {
 			return;
 		} else {
 			$('.add-btn').on('click', function() {
-				$(this).prop("disabled", true);
-				alert("Medicine was added.")
 				var medArr = this.value.split('^');
+				$('.modal-title').empty();
+				$('.modal-body').empty();
+				$('.modal-title').html('<h2>Medicine added.</h2>');
+				$('.modal-body').html(`<h4>${medArr[1]} has been added to your records.</h4>`);
+				$('#warning').modal('show');
+				$(this).prop("disabled", true);
 				console.log(medArr);
 				$.post('/api/add', {
 					id: medArr[0],
@@ -42,19 +40,19 @@ const check = () => {
 			});
 		}
 	})
-
 }
+
+
 $('#searchBtn').on('click', async function() {
 	$("#searchResults").empty();
 	$("#error").empty();
 	let searchTerm = $('#fdaSearch').val();
-	// console.log(searchTerm);
 	$.ajax({
 		url: `https://api.fda.gov/drug/label.json?search=openfda.product_type:otc+AND+brand_name:${searchTerm}&limit=5`,
 		type: 'GET',
 		error: (xhr, ajaxOptions, thrownError) => {
 			if (xhr.status == 404) return $("#error").html("Drug not found, please check spelling");
-			if (xhr.status == 500) return $("#error").html("Whoops! Something we did went wrong, plase try again.")
+			if (xhr.status == 500) return $("#error").html("Whoops! Something's wrong on our end. Please try again.")
 		}
 	}).then((req, res) => {
 
