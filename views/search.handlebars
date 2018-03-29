@@ -3,30 +3,6 @@
 <nav class="navbar navbar-default navbar-fixed-top" id="nav-blue">
   <div class="container-fluid">
 
-<div class="container-fluid">
-  <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-    <h3 id="title">Drug Search</h3>
-    <input id="fdaSearch" type="text" placeholder="Type Name of drug" autofocus="autofocus" />
-    <button id="searchBtn">Search</button>
-    <div id="error"></div>
-    <h1>Search Results:</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>Brand Name</th>
-          <th>Generic Name </th>
-          <th>Indications</th>
-          <!-- <th>Administration</th> -->
-          <th>Active Ingredients</th>
-          <th>Add</th>
-        </tr>
-      </thead>
-      <tbody id="searchResults">
-
-      </tbody>
-    </table>
-
-
     {{!-- logo --}}
      <a href="/" class="navbar-brand navbar-nav">
         {{!-- icon --}}
@@ -85,7 +61,7 @@
             <th>Purpose</th>
             <th>Administration</th>
             <th>Active Ingredients</th>
-            {{!-- <th>Add</th> --}}
+            <th>Add</th>
           </tr>
         </thead>
         <tbody id="searchResults"></tbody>
