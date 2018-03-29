@@ -5,11 +5,19 @@ const passport = require("../config/passport");
 
 module.exports = function(app) {
 
+	app.get("/api/check", (req, res) => {
+		console.log(req.user, !req.user)
+		res.send(req.user ? true : false)
+		return;
+	});
+
 	// return all meds for current user from database
 	app.get("/api/meds", (req, res) => {
-		db.Med.findAll({where: {
-			userId: req.user.id
-		}}).then(results => {
+		db.Med.findAll({
+			where: {
+				userId: req.user.id
+			}
+		}).then(results => {
 			res.json(results);
 		})
 	});
@@ -23,7 +31,7 @@ module.exports = function(app) {
 			}
 		}).then(response => res.send(response));
 	});
-	
+
 	//SAVE MEDICATIONS
 	app.post("/api/add", (req, res) => {
 		db.Med.create({
@@ -34,12 +42,12 @@ module.exports = function(app) {
 		}).then(() => console.log(`${req.user.id} has added medicine with NDC ${req.body.id} to database`))
 	});
 
-	app.delete('/api/meds/:id', (req,res)=>{
+	app.delete('/api/meds/:id', (req, res) => {
 		db.Med.destroy({
 			where: {
 				fdaMedId: req.params.id
 			}
-		}).then((response)=>{
+		}).then((response) => {
 			console.log(response)
 			console.log(`User ${req.user.id} has deleted medicine with NDC ${req.params.id} from database`);
 			res.sendStatus(response ? 200 : 500);
