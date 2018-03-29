@@ -25,10 +25,15 @@ body {
     font-weight: bolder;
 }
 
+
 .dropdown-menu>li>a {
     background: #105dfb;
     color: #fff;
     font-size: 18px;
+}
+
+ul.dropdown-menu {
+    background: #105dfb; 
 }
 
 #nav-blue {
@@ -50,6 +55,8 @@ body {
     vertical-align: middle;
     margin-top: 15px;
 }
+
+
 
 /* INDEX PAGE */
 /* --------------------------------------------- */
@@ -163,6 +170,10 @@ p.index {
     /* background: #105dfb; */
 }
 
+form.login {
+   margin-top: 30px; 
+}
+
 
 /* INDEX PAGE END */
 
@@ -206,7 +217,6 @@ p.index {
     text-align: center;
     background: #105dfb;
     font-size: 15px;
-   
 }
 
 a.btn.btn-default.btn-login>a:hover {
@@ -244,12 +254,17 @@ a.btn.btn-default.btn-login>a:hover {
 
 
 /* SEARCH PAGE */
+.form-search {
+    width: 100%;
+}
 
-.table {
+.table-striped {
     width: 100%;
     margin: 0 auto;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+    margin-bottom: 100px;
 }
 
 th {
@@ -266,8 +281,8 @@ td {
 .search-input {
     background: #fff;
     text-align: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    /* padnding-top: 100px; */
+    margin-bottom: 100px;
     color: #105dfb;
 }
 
@@ -275,9 +290,17 @@ td {
     background: #fff;
 }
 
-/* search input */
-#fdaSearch {
-    width: 80%;
+.btn-submit {
+    /* width: 30%; */
+    border-color: #105dfb;
+    color: #eee;
+    border-width: 3px;
+    /* margin-bottom: 10px; */
+    text-align: center;
+    margin: 0px auto;
+    text-align: center;
+    background: #105dfb;
+    font-size: 15px;
 }
 
 .btn-search {

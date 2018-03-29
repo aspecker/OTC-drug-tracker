@@ -67,7 +67,7 @@ $('#searchBtn').on('click', async function() {
 				let pullData = [`${fdaMedId}^${brandName}^${genericName}^${activeIngredient}`];
 				console.log(pullData);
 				$("#searchResults").append(
-					`<tr><td>${brandName}</td><td>${genericName}</td><td>${purpose}</td><td>${doseAdmin}</td><td>${activeIngredient}
+					`<tr><td><h4>${brandName}</h4></td><td>${genericName}</td><td>${purpose}</td><td>${doseAdmin}</td><td>${activeIngredient}
 					</td>
 					<button class="add-btn btn btn-info btn-block" id="${key}" value='${pullData}'>Add</button>
 					
