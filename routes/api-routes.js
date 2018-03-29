@@ -1,5 +1,4 @@
-// CORE API Query
-// https://api.fda.gov/drug/label.json?search=openfda.product_type:otc+AND+
+// Routes handle user auth and interfacing with meds table
 const db = require("../models");
 const passport = require("../config/passport");
 
@@ -20,7 +19,8 @@ module.exports = function(app) {
 			res.json(results);
 		})
 	});
-	//
+	
+	// put route for changing medicine's status
 	app.put("/api/retire", function(req, res) {
 		console.log(req.body);
 		db.Med.update(req.body, {
@@ -30,8 +30,8 @@ module.exports = function(app) {
 			}
 		}).then(response => res.send(response));
 	});
-
-	//SAVE MEDICATIONS
+	
+	//add a medicine to the database for a user
 	app.post("/api/add", (req, res) => {
 		db.Med.create({
 			userId: req.user.id,
@@ -53,7 +53,7 @@ module.exports = function(app) {
 		})
 	})
 
-
+	//AUTH ROUTES
 	//local login
 	app.post("/api/login", passport.authenticate("local"), (req, res) => {
 		res.redirect("/search");
