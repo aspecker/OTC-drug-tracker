@@ -6,7 +6,6 @@ const passport = require("../config/passport");
 module.exports = function(app) {
 
 	app.get("/api/check", (req, res) => {
-		console.log(req.user, !req.user)
 		res.send(req.user ? true : false)
 		return;
 	});

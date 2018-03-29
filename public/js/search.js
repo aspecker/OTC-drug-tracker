@@ -38,7 +38,7 @@ const check = () => {
 					brand_name: medArr[1],
 					generic_name: medArr[2],
 					route: medArr[3]
-				}, () => null)
+				})
 			});
 		}
 	})
