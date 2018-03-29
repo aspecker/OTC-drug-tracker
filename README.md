@@ -4,21 +4,79 @@
 ### Chandler Dibble, Nicole Yoon, Al Curry, Tim Hill, Adam Specker
 
 # Overview
-* a project intended to help consumers find and keep track of over-the-counter drugs they've used
-* why? either a young person who doesn't take medicine much or an old person who takes a lot
-    * they need to know what's out there, and they need to know what they've taken
-* what? an MVC model app using a database and the FDA open api to allow users to:
-    * keep track of their OTC medication use, with easy access to information about those drugs
-        * set those medications to active or inactive, with data logged based on time of administration
-    * search the open FDA api for the right OTC drug for you
+An application built to help consumers find and keep track of over-the-counter drugs they currently use and have taken.
 
+**Please visit out application here: 
+
+**Real World Problem:
+
+People young and old whether they take large or small amounts of medicines, need to keep track of them. For years people have attended doctors offices for their regular checks or for other cases and could not provide their with an appropriate respoinses in regards to their recents medine intake. There is a need for a pill tracking application that allows users to keep track fo the drugs they are currently taking and keep those historicals even after they stop such. User will have ability to pull up this information right from their phone to ensure they can provide their doctor or simply themselves of their medicine intake. Staying health and furthermore keeping track of ones helath is of utmost important in life and pill pal helps managing that easier. 
+
+**How can we solve this?
+
+   Utilize an MVC model app using a database with profile capabilities and the FDA open api to allow users to:
+    * Create account with encrypted password
+      * Login and logout capability
+    * Keep track of their OTC medication use, with easy access to information about those drugs
+        * Profile page with two seperate data sets of active and historical medicines taken
+        * Medications set to active or inactive, with data logged based on time of administration by user
+    * User will hahve ability to Search the open FDA api for a particular medicine with information about it:
+    
+    * Brand Name
+    * Generic Name
+    * NDC Number
+    * Warnings
+      * General
+      * Pregnancy
+      * Etc. 
+    * Ingredients
+    * Route
+    * Dosage and Administration
+    * Purpose
+    * And more!
+
+**Dependecies used:
+
+    * bcrypt-nodejs
+    * body-parser
+    * dotenv
+    * express
+    * express-handlebars
+    * express-session
+    * mysql
+    * mysql2
+    * passport
+    * passport-local
+    * sequelize
+    
+### March 28 - Fine Tuning the Application
+* Add/archive drug toggle functionality for user
+* updated search fields for cleaner data delivery
+* Fine tuning handlebars structure and client side interaction
+   * auto focus on text fields
+   * keyboard (enter) to trigger actions or data calls
+* Error notifications
+   * Search (misspellings)
+   * Email (incorrect email)
+   * Sign up / Email (Duplicates not allowed, notifcation to inform user if email is already taken)
+   * Logout (log out alert)
+   * Login (log in alert)
+* Modals
+   * Opportunity for users to access additional informaiton about drug in profile
+      * Active Ingredients
+      * General Warnings
+    
 ### March 27 - Adding on Core Functions
 * basic site flow and functionality is in place
 * nicole is adding css and design elements
 * chandler is working on the search function integrated into site flow
 * al is working on contact form
 * adam is working on med page
-* tim is wrangling the ajax calls, moving some to backend
+* tim is wrangling the ajax calls, moving some to backend; handlebar debuggin
+* EOD - core function of site is in place
+    * search, login/register, add med all working
+    * user flow is continuous around the page
+    * needs MUCH more refinement in all areas
 
 ### March 26 - Integrating Files
 * the goal today is to have all the files integrated and working in a base functional level by EoD
@@ -57,6 +115,5 @@
     * chandler - explore lunr for fuzzy searches and WRITE GOOD NOTES
     * tim - will look into bcrypt 
     * adam - will set up trello and look into agile project management
-
 
 
