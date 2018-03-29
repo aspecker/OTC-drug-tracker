@@ -100,3 +100,7 @@ body {
     font-weight: 700;
 }
 /* MED PAGE END */
+/* text color for login error messages - class in login.handlebars */
+.message {
+    color: red;
+  }

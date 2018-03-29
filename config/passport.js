@@ -14,14 +14,10 @@ passport.use(new LocalStrategy(
       }
     }).then(function(dbUser) {
       if (!dbUser) {
-        return done(null, false, {
-          message: "Incorrect email."
-        });
+        return done({message: 'Email not found.'}, false);
       }
       else if (!dbUser.validPassword(password)) {
-        return done(null, false, {
-          message: "Incorrect password."
-        });
+        return done({message: 'incorrect password'}, false);
       }
       return done(null, dbUser);
     });
