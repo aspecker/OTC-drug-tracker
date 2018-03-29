@@ -55,7 +55,7 @@ $('#searchBtn').on('click', async function() {
 			if (xhr.status == 500) return $("#error").html("Whoops! Something's wrong on our end. Please try again.")
 		}
 	}).then((req, res) => {
-
+		$('.table').show();
 		let obj = req.results;
 		// let parsedData = [];
 		Object.keys(obj).forEach(function(key) {

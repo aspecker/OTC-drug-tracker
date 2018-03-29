@@ -21,13 +21,14 @@ module.exports = function(app) {
       return res.redirect("/meds");
     }
     else {
-      res.render("login");
+      res.render("login", {username: checkUser(req)});
     }
   });
 
+    
   // signup page route
   app.get('/signup', (req,res)=>{
-    res.render('signup')
+    res.render('signup', {username: checkUser(req)})
   })
 
   // med page route
@@ -46,7 +47,7 @@ module.exports = function(app) {
 
   // search page route
   app.get('/search', function(req,res){
-    res.render('search')
+    res.render('search', {username: checkUser(req)})
   })
 
 };

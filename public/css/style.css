@@ -245,6 +245,7 @@ a.btn.btn-default.btn-login>a:hover {
 /* SEARCH PAGE */
 
 .table {
+    display: none;
     width: 100%;
     margin: 0 auto;
     padding-right: 10px;
