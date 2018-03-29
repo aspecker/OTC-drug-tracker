@@ -1,77 +1,102 @@
+<nav class="navbar navbar-default navbar-fixed-top" id="nav-blue">
+    <div class="container-fluid">
+            
+        <a href="#" class="navbar-brand navbar-nav">
+        {{!-- icon --}}
+            <i class="fas fa-pills fa-lg fa-spin" data-fa-transform="grow-5" style="color:#fff"></i>
+        </a>
 
-<div class="jumbotron jumbotron-fluid vertical-center">
+        {{!-- LOGIN/LOGOUT DROPDOWN --}}
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Pill Pal <span class="caret"></span></a>
+                
+                <ul class="dropdown-menu">
+                    <li><a href="/meds">My Meds</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a class="nav-link" href="/logout">Logout</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link blue" href="/search">Search</a>
+            </li>
+        </ul>
+
+        {{!-- navbar right --}}
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+                <a class="nav-link" href="/#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/#howTo">Guide</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/#contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+{{!-- JUMBOTRON --}}
+<div class="jumbotron jumbotron-fluid vertical-center parallax-index">
     <div class="container">
         <h1 id="jumbo" class="animated flash">Pill Pal</h1>
             <p class="">We track your health so you don't have to.</p>
             <p>
-                <a class="btn btn-primary btn-lg" href="/search" role="button">
-                     <i class="fas fa-search fa-lg" style="color:#fff"></i>   SEARCH MEDS</a>
-                <a class="btn btn-primary btn-lg" href="/login" role="button">
-                    <i class="fas fa-user fa-lg" style="color:#fff"></i>   MY PILL PAL</a>
+                <a class="btn btn-lg btn-index" href="/search" role="button">S E A R C H
+                     {{!-- <i class="fas fa-search fa-lg" style="color:#fff"></i>   SEARCH MEDS --}}
+                </a>
+                <a class="btn btn-lg btn-index" href="/login" role="button">M Y &nbsp; P I L L &nbsp; P A L
+                    {{!-- <i class="fas fa-user fa-lg" style="color:#fff"></i>   MY PILL PAL --}}
+                </a>
             </p>
-        
-        </div>
+    </div>
 </div>
 
-{{!-- <div class="parallax"> --}}
-    <div class="container parallax">
-        <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-       
+<div class="container-fluid" id="tall">
+    <div data-spy="scroll" data-target="#body" data-offset="0">
+        <div class="container-fluid parallax-about">
             <h3 id="about">About Pill Pal</h3>
-            <p>
+
+                <p class="index">
                 Pill Pal Lorem ipsum dolor sit amet, nec ea meis hendrerit, impetus delectus sit no, cum id congue gloriatur definitionem. Te amet choro sea, has in corpora suscipiantur. Te eum cibo vocibus assentior. Duis probo propriae an pri, pro quod liber facilis ne. Dictas senserit maiestatis cu sed, est et electram assentior, per te civibus praesent.
-            </p>
-  
+                </p>
+            </div> {{! .parallax}}
+
+        <div class="container-fluid parallax-guide">
             <h3 id="howTo">Guide</h3>
-            <h1>1.</h1>
-            <p>Login</p>
-            <p>
-                Keep track with us. Once you're done, 
+            <p class="index">Mei partiendo comprehensam ea. Te vel graeci dictas, et duo tantas concludaturque. Eu veri congue consectetuer pro. Et omittam explicari imperdiet eos, ea vis mundi nihil dissentias. Illud facilis nam an, nec in habeo ignota maluisset, ut enim apeirian suscipiantur duo. Erant civibus sapientem duo ad, sit at magna reque.
+            sit amet, nec ea meis hendrerit, impetus delectus sit no, cum id congue gloriatur definitionem. Te amet choro sea, has in corpora suscipiantur. Te eum cibo vocibus assentior. Duis probo propriae an pri, pro quod liber facilis ne. Dictas senserit maiestatis cu sed, est et electram assentior, per te civibus praesent.Lorem ipsum dolor sit amet, nec ea meis hendrerit, impetus delectus sit no, cum id congue gloriatur definitionem. Te amet choro sea, has in corpora suscipiantur. Te eum cibo vocibus assentior. Duis probo propriae an pri, pro quod liber facilis ne. Dictas senserit maiestatis cu sed, est et electram assentior, per te civibus praesent.Lorem ipsum dolor sit amet, nec ea meis hendrerit, impetus delectus sit no, cum id congue gloriatur definitionem. Te amet choro sea, has in corpora suscipiantur. Te eum cibo vocibus assentior. Duis probo propriae an pri, pro quod liber facilis ne. Dictas senserit maiestatis cu sed, est et electram assentior, per te civibus praesent.Lorem ipsum dolor sit amet, nec ea meis hendrerit, impetus delectus sit no, cum id congue gloriatur definitionem. Te amet choro sea, has in corpora suscipiantur. Te eum cibo vocibus assentior. Duis probo propriae an pri, pro quod liber facilis ne. Dictas senserit maiestatis cu sed, est et electram assentior, per te civibus praesent.Mei partiendo comprehensam ea. Te vel graeci dictas, et duo tantas concludaturque. Eu veri congue consectetuer pro. Et omittam explicari imperdiet eos, ea vis mundi nihil dissentias. Illud facilis nam an,  nec in habeo ignota maluisset, ut enim apeirian suscipiantur duo. Erant civibus sapientem duo ad, sit at magna reque.Lorem ipsum dolor sit amet, nec ea meis hendrerit, impetus delectus sit no, cum id congue gloriatur definitionem. Te amet choro sea, has in corpora suscipiantur. Te eum cibo vocibus assentior. Duis probo propriae an pri, pro quod liber facilis ne. Dictas senserit maiestatis cu sed, est et electram assentior, per te civibus praesent.
             </p>
-            <p>Mei partiendo comprehensam ea. Te vel graeci dictas, et duo tantas concludaturque. Eu veri congue consectetuer pro. Et omittam explicari imperdiet eos, ea vis mundi nihil dissentias. Illud facilis nam an, nec in habeo ignota maluisset, ut enim apeirian suscipiantur duo. Erant civibus sapientem duo ad, sit at magna reque.</p>
-            <p>Lorem ipsum dolor sit amet, nec ea meis hendrerit, impetus delectus sit no, cum id congue gloriatur definitionem. Te amet choro sea, has in corpora suscipiantur. Te eum cibo vocibus assentior. Duis probo propriae an pri, pro quod liber facilis ne. Dictas senserit maiestatis cu sed, est et electram assentior, per te civibus praesent.
-            Lorem ipsum dolor sit amet, nec ea meis hendrerit, impetus delectus sit no, cum id congue gloriatur definitionem. Te amet choro sea, has in corpora suscipiantur. Te eum cibo vocibus assentior. Duis probo propriae an pri, pro quod liber facilis ne. Dictas senserit maiestatis cu sed, est et electram assentior, per te civibus praesent.Lorem ipsum dolor sit amet, nec ea meis hendrerit, impetus delectus sit no, cum id congue gloriatur definitionem. Te amet choro sea, has in corpora suscipiantur. Te eum cibo vocibus assentior. Duis probo propriae an pri, pro quod liber facilis ne. Dictas senserit maiestatis cu sed, est et electram assentior, per te civibus praesent.Lorem ipsum dolor sit amet, nec ea meis hendrerit, impetus delectus sit no, cum id congue gloriatur definitionem. Te amet choro sea, has in corpora suscipiantur. Te eum cibo vocibus assentior. Duis probo propriae an pri, pro quod liber facilis ne. Dictas senserit maiestatis cu sed, est et electram assentior, per te civibus praesent.Lorem ipsum dolor sit amet, nec ea meis hendrerit, impetus delectus sit no, cum id congue gloriatur definitionem. Te amet choro sea, has in corpora suscipiantur. Te eum cibo vocibus assentior. Duis probo propriae an pri, pro quod liber facilis ne. Dictas senserit maiestatis cu sed, est et electram assentior, per te civibus praesent.
-            </p>
-            <p>Mei partiendo comprehensam ea. Te vel graeci dictas, et duo tantas concludaturque. Eu veri congue consectetuer pro. Et omittam explicari imperdiet eos, ea vis mundi nihil dissentias. Illud facilis nam an, nec in habeo ignota maluisset, ut enim apeirian suscipiantur duo. Erant civibus sapientem duo ad, sit at magna reque.</p>
-            <p>Lorem ipsum dolor sit amet, nec ea meis hendrerit, impetus delectus sit no, cum id congue gloriatur definitionem. Te amet choro sea, has in corpora suscipiantur. Te eum cibo vocibus assentior. Duis probo propriae an pri, pro quod liber facilis ne. Dictas senserit maiestatis cu sed, est et electram assentior, per te civibus praesent.
-            Lorem ipsum dolor sit amet, nec ea meis hendrerit, impetus delectus sit no, cum id congue gloriatur definitionem. Te amet choro sea, has in corpora suscipiantur. Te eum cibo vocibus assentior. Duis probo propriae an pri, pro quod liber facilis ne. Dictas senserit maiestatis cu sed, est et electram assentior, per te civibus praesent.Lorem ipsum dolor sit amet, nec ea meis hendrerit, impetus delectus sit no, cum id congue gloriatur definitionem. Te amet choro sea, has in corpora suscipiantur. Te eum cibo vocibus assentior. Duis probo propriae an pri, pro quod liber facilis ne. Dictas senserit maiestatis cu sed, est et electram assentior, per te civibus praesent.Lorem ipsum dolor sit amet, nec ea meis hendrerit, impetus delectus sit no, cum id congue gloriatur definitionem. Te amet choro sea, has in corpora suscipiantur. Te eum cibo vocibus assentior. Duis probo propriae an pri, pro quod liber facilis ne. Dictas senserit maiestatis cu sed, est et electram assentior, per te civibus praesent.Lorem ipsum dolor sit amet, nec ea meis hendrerit, impetus delectus sit no, cum id congue gloriatur definitionem. Te amet choro sea, has in corpora suscipiantur. Te eum cibo vocibus assentior. Duis probo propriae an pri, pro quod liber facilis ne. Dictas senserit maiestatis cu sed, est et electram assentior, per te civibus praesent.
-            </p>
+            <p>DISCLAIMER HERE</p>
+        </div> {{! Guide Div}}
 
-            <p class="text-muted">DISCLAIMER</p>
+        <div class="container-fluid parallax-contact">
+            <h4 id="contact">Contact Us</h4>  
             
-             <h4 id="contact">Contact Us</h4>  
-
-
-        <!-- Contact inputs -->
-        
-        <form method="POST" action="https://formspree.io/pillpalposse@gmail.com">
-            <div>
-                <h4 class="text-teal">Name:</h4>
-                <input type="text" name="name" placeholder="John Smith" class="full-width form-control">
-            </div>
-            <br>
-            <div>
-                <h4 class="text-teal">Email:</h4>
-                <input type="text" name="email" placeholder="example@gmail.com" class="full-width form-control">
-            </div>
-            <br>
-            <div>
-                <h4 class="text-teal">Message:</h4>
-                <textarea class="full-width form-control" name="message" cols="100" rows="5"></textarea>
-            </div>
-            <input type="hidden" name="_subject" value="from Pillpal" />
-            <br>
-            <!-- submit button -->
-            <button class="btn btn-default submit-btn" id="submit-button">Submit</button>
-        </form>
+            <!-- Contact inputs -->
+            <form method="POST" action="https://formspree.io/pillpalposse@gmail.com">
+                <div>
+                    {{!-- <h4 class="text-teal">Name:</h4> --}}
+                    <input type="text" name="name" placeholder="Name" class=" form-control">
+                </div>
+                <br>
+                <div>
+                    {{!-- <h4 class="text-teal">Email:</h4> --}}
+                    <input type="text" name="email" placeholder="Email" class=" form-control">
+                </div>
+                <br>
+                <div>
+                    {{!-- <h4 class="text-teal">Message:</h4> --}}
+                    <textarea class="full-width form-control" name="message" cols="100"  placeholder="Message" rows="5"></textarea>
+                </div>
+                <input type="hidden" name="_subject" value="from Pillpal"/>
+                <br>
+                <!-- submit button -->
+                <button class="btn btn-default btn-index">Submit</button>
+            </form>
         <!-- End of Contact inputs -->
-        
-    </div>
-    </div>
-            
-        </div>
-    {{!-- close container div  --}}
-    </div>
-{{!-- close parallax indep div --}}
-</div>
-
+        </div> {{! Contact Div }}
+    </div> {{! Scroll Spy Div}}
+</div> {{! Container-fluid Div}}

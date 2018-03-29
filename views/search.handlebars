@@ -1,37 +1,98 @@
-<style media="screen">
-  th {
-    text-align: center;
-    color: tomato;
-    font-weight: bold;
-    border: 2px solid black;
+{{!-- NAV BAR --}}
+<nav class="navbar navbar-default navbar-fixed-top" id="nav-blue">
+  <div class="container-fluid">
 
-  }
-</style>
-<div class="container-fluid">
-  <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-    <h3 id="title">Drug Search</h3>
-    <input id="fdaSearch" type="text" placeholder="Type Name of drug" />
-    <button id="searchBtn">Search</button>
-    <h1>Search Results:</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>Brand Name</th>
-          <th>Generic Name </th>
-          <th>Purpose</th>
-          <th>Administration</th>
-          <th>Active Ingredients</th>
-          <th>Add</th>
-        </tr>
-      </thead>
-      <tbody id="searchResults">
-
-      </tbody>
-    </table>
-
+    {{!-- logo --}}
+     <a href="/" class="navbar-brand navbar-nav">
+        {{!-- icon --}}
+        <i class="fas fa-pills fa-lg fa-spin" data-fa-transform="grow-5" style="color:#fff"></i>
+    </a>
+        
+    {{!-- login/logout dropdown --}}
+    <ul class="nav navbar-nav">
+      <li class="dropdown">
+        <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Pill Pal <span class="caret"></span></a>
+                
+        <ul class="dropdown-menu">
+          <li><a href="/meds">My Meds</a></li>
+          <li><a href="/login">Login</a></li>
+          <li><a class="nav-link" href="/logout">Logout</a></li>
+        </ul>
+      </li>
+      {{!-- SEARCH --}}
+      <li class="nav-item">
+        <a class="nav-link blue" href="/search">Search</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+{{!-- ------------------------------- --}}
+{{!-- MAIN CONTENT --}}
+<div class="container" id="tall">
+    <div class="row"> 
+      {{!-- search input column --}}
+      <div class="col-md-12 search-input">
+        <h3 id="title">Drug Search</h3>
+          
+        <div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button">Button</button>
   </div>
 </div>
+
+
+
+
+
+
+        <div class="input-group">
+          <input id="fdaSearch" type="text" class="form-control" placeholder="Enter name of drug" aria-describedby="basic-addon2">
+          
+          <span id="searchBtn" class="input-group-addon" id="basic-addon2">Search</span>
+        </div>
+
+          {{!-- <input id="fdaSearch" type="text" placeholder="Enter name of drug" />
+          <button id="searchBtn" type="submit" class="btn btn-default btn-search">Search</button>
+           --}}
+          {{!-- <button id="searchBtn">Search</button> --}}
+      </div> {{! col 1}}
+    </div>
+      
+      
+    {{!-- search results column --}}
+    <div class="row">
+    <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+      <div class="col-md-12 search-table">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Brand</th>
+            <th>Generic Name </th>
+            <th>Purpose</th>
+            <th>Administration</th>
+            <th>Active Ingredients</th>
+            {{!-- <th>Add</th> --}}
+          </tr>
+        </thead>
+        <tbody id="searchResults"></tbody>
+    </table>
+      </div> {{! col 2}}
+    </div> {{! row 1}}
+
+
+
+    {{!-- SEARCH INPUT AND RESULTS --}}
+  
+
+    <br><br><br>
+    {{!-- <h1>Search Results:</h1> --}}
+    
+    
+
+  </div> <!-- end scroll div -->
 </div>
+
 <!-- <script type="text/javascript" src="../public/js/search.js" charset="utf-8"></script> -->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 

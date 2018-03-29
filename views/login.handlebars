@@ -1,31 +1,56 @@
+{{!-- NAV BAR --}}
+<nav class="navbar navbar-default navbar-fixed-top" id="nav-blue">
+  <div class="container-fluid">
 
-http://localhost:8080/
+    {{!-- logo --}}
+     <a href="/" class="navbar-brand navbar-nav">
+        {{!-- icon --}}
+        <i class="fas fa-pills fa-lg fa-spin" data-fa-transform="grow-5" style="color:#fff"></i>
+    </a>
+        
+    {{!-- login/logout dropdown --}}
+    <ul class="nav navbar-nav">
+      <li class="dropdown">
+        <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Pill Pal <span class="caret"></span></a>
+                
+        <ul class="dropdown-menu">
+          <li><a href="/meds">My Meds</a></li>
+          <li><a href="/login">Login</a></li>
+          <li><a class="nav-link" href="/logout">Logout</a></li>
+        </ul>
+      </li>
+      {{!-- SEARCH --}}
+      <li class="nav-item">
+        <a class="nav-link blue" href="/search">Search</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                </div>
-            </div>
-        </nav>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                  <h2>Login Form</h2>
+{{!-- MAIN CONTENT --}}
+<div class="container-fluid container-login" id="tall">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 log-sign">
+        
+        <form class="login">
+          <h1>Login</h1>
+          <div class="form-group">
 
-                  <form class="login">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Email address</label>
-                      <input type="email" class="form-control" id="email-input" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Password</label>
-                      <input type="password" class="form-control" id="password-input" placeholder="Password">
-                    </div>
-                    <button type="submit" class="btn btn-default">Login</button>
-                  </form>
-                  <br>
-                  <p>Don't have an account? Click <a href='signup'>here</a> to get an account.</p>
+            {{!-- <label for="exampleInputEmail1">Email</label> --}}
+            <input type="email" class="form-control" id="email-input" placeholder="Email">
+          </div>
+          
+          <div class="form-group">
+            {{!-- <label for="exampleInputPassword1">Password</label> --}}
+            <input type="password" class="form-control" id="password-input" placeholder="Password">
+          </div>
+                    
+          <button type="submit" class="btn btn-default btn-login">Login</button>
+          <p class="login-center">Not a member? 
+          <a href="signup">Become one!</a>
+        </p>
+        </form>
 
-                </div>
-              </div>
-            </div>
+    </div> {{!-- end col div --}}
+  </div> {{!-- end row div --}}
+</div> 

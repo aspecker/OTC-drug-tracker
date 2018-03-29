@@ -31,7 +31,11 @@ $('#searchBtn').on('click', function() {
 				let pullData = [`${fdaMedId}^${brandName}^${genericName}^${activeIngredient}`];
 				console.log(pullData);
 				$("#searchResults").append(
-					`<tr><td>${brandName}</td><td>${genericName}</td><td>${purpose}</td><td>${doseAdmin}</td><td>${activeIngredient}</td><td><button class="add-btn btn btn-danger btn-block" id="${key}" value='${pullData}'>Click</button></td></tr><hr>`
+					`<tr><td>${brandName}</td><td>${genericName}</td><td>${purpose}</td><td>${doseAdmin}</td><td>${activeIngredient}
+					</td>
+					<button class="add-btn btn btn-info btn-block" id="${key}" value='${pullData}'>Add</button>
+					
+					</tr><hr>`
 				);
 				// $(`#${key}`).data('savedMed', {brand_name: brandName, generic_name: genericName, rout: route} );
 				// parsedhttps://api.fda.gov/drug/label.json?search=openfda.product_type:otc+AND+brand_name:${searchTerm}&limit=5`Data.push([brandName, genericName, route, whenUsing, purpose, doseAdmin, activeIngredient, question]);
