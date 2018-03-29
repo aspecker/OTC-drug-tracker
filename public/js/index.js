@@ -27,9 +27,7 @@ $(document).ready(function () {
         }).then(function (data) {
             window.location = '/meds';
         }).catch(function (err) {
-            console.log(err);
-            console.log(err.responseJSON.err.message);
-            $(".message").text(err.responseJSON.err.message);
+            $(".message").text('Please enter correct login information.');
         });
     }
 }); 
