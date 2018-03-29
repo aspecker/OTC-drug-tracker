@@ -1,3 +1,32 @@
+{{!-- NAV BAR --}}
+<nav class="navbar navbar-default navbar-fixed-top" id="nav-blue">
+  <div class="container-fluid">
+
+    {{!-- logo --}}
+     <a href="/" class="navbar-brand navbar-nav">
+        {{!-- icon --}}
+        <i class="fas fa-pills fa-lg fa-spin" data-fa-transform="grow-5" style="color:#fff"></i>
+    </a>
+        
+    {{!-- login/logout dropdown --}}
+    <ul class="nav navbar-nav">
+      <li class="dropdown">
+        <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Pill Pal <span class="caret"></span></a>
+                
+        <ul class="dropdown-menu">
+          <li><a href="/meds">My Meds</a></li>
+          <li><a href="/login">Login</a></li>
+          <li><a class="nav-link" href="/logout">Logout</a></li>
+        </ul>
+      </li>
+      {{!-- SEARCH --}}
+      <li class="nav-item">
+        <a class="nav-link blue" href="/search">Search</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 <div class="container">
         <!-- row 1 -->
         <div class="row">

@@ -1,21 +1,32 @@
+/* MAIN  */
 
 body {
-    /* for top nav */
-    padding-top: 50px;
+    margin-top: 50px;
 }
 
-/* INDEX PAGE */
-/* --------------------------------------------- */
-.parallax {
-    background-image: url("../assets/felix.jpg");
-    height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+/* for all borders */
+* {
+    border-radius: 0 !important;
+  }
+
+
+#tall { /* for container div */
+    min-height: 800px;
 }
 
 /* nav bar */
-.nav-link {
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    font-size: 15px; 
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #f5b8d3;
+    font-weight: bolder;
+}
+
+.dropdown-menu>li>a {
+    background: #105dfb;
     color: #fff;
     font-size: 18px;
 }
@@ -26,10 +37,24 @@ body {
     border-bottom-color: #105dfb;
 }
 
-.jumbotron {
+.footer {
     background: #105dfb;
-    /* background: linear-gradient(#105dfb 80%, #fff); */
     color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    height: 50px;
+}
+
+.footer-text {
+    color: #fff;
+    vertical-align: middle;
+    margin-top: 15px;
+}
+
+/* INDEX PAGE */
+/* --------------------------------------------- */
+.jumbotron {
+    color: #105dfb;
     text-align: center;
 }
 
@@ -46,12 +71,224 @@ body {
     font-size: 100px;
 }
 
-/* h3 header in container */
-#about, #howTo, #contact {
+.parallax-index {
+    background-image: url("../assets/jumbotron.svg");
+    height: auto;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.parallax-about {
+    background-image: url("../assets/whitesparkle.svg");
+    height: 700px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f9e2e1;
+    /* background: #eee; */
+    /* width: 80%; */
+    /* margin */
+}
+
+.parallax-guide {
+    background-image: url("../assets/pink-pills.svg");
+    height: auto;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #eee;
+    color: #000;
+}
+
+.parallax-contact {
+    background-image: url("../assets/white1.png");
+    height: auto;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: #eee;
+    margin-bottom: 50px;
+}
+
+p.index {
+    margin: 100px;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+/* blue container background */
+.container-blue {
+    background: #105dfb;
+    /* padding: 100px; */
+
+}
+
+#howTo {
     color: #105dfb;
     font-size: 50px;
     padding-top: 50px;
     padding-bottom: 30px;
+    text-align: center;
+}
+
+#contact {
+    color: #105dfb;
+    font-size: 50px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+/* h3 header in container */
+#about {
+    color: #105dfb;
+    font-size: 50px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.btn-index {
+    width: 30%;
+    border-color: #105dfb;
+    color: #105dfb;
+    border-width: 3px;
+    /* margin-bottom: 10px; */
+    text-align: center;
+    margin: 0px auto;
+    text-align: center;
+    background: #eee;
+    font-size: 15px;
+    /* background: #105dfb; */
+}
+
+
+/* INDEX PAGE END */
+
+/* ------------------------------------------------- */
+/* LOGIN PAGE */
+
+/* background color */
+.container-login {
+    background-color: #eee;
+    color: #105dfb;
+}
+
+.login {
+    margin-top: 150px;
+    text-align: center;
+} 
+
+.login h1 {
+    font-size: 25px;
+}
+
+/* form input */
+.form-control {
+    width: 70%;
+    margin: 0px auto;
+    border-color:#105dfb;
+    border-width:  3px;
+    color: #105dfb;
+    background: #eee;    
+}
+
+/* login button */
+.btn-login {
+    width: 30%;
+    border-color: #105dfb;
+    color: #eee;
+    border-width: 3px;
+    /* margin-bottom: 10px; */
+    text-align: center;
+    margin: 0px auto;
+    text-align: center;
+    background: #105dfb;
+    font-size: 15px;
+   
+}
+
+a.btn.btn-default.btn-login>a:hover {
+    font-size: 18px;
+    color: #093389;
+}
+
+/* p class  */
+.login-center {
+    text-align: center;
+}
+
+.log-sign {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* END LOGIN */
+/* ----------------------------------------- */
+
+/* SIGNUP PAGE */
+
+/* signup input */
+.signup {
+    width: 70%;
+    margin: 0px auto;
+    border-color:#105dfb;
+    border-width:  3px;
+    color: #105dfb;
+    background: #eee;
+    padding-top: 100px;
+}
+
+/* END SIGNUP */
+
+
+/* SEARCH PAGE */
+
+.table {
+    width: 100%;
+    margin: 0 auto;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+th {
+    color: #105dfb;
+    border: 1px solid #105dfb;
+    text-align: center;
+}
+
+td {
+    padding: 10px;
+}
+
+/* search input column */
+.search-input {
+    background: #fff;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: #105dfb;
+}
+
+.search-table {
+    background: #fff;
+}
+
+/* search input */
+#fdaSearch {
+    width: 80%;
+}
+
+.btn-search {
+    width: auto;
+    border: #105dfb;
+}
+
+
+#title {
+    margin-bottom: 20px;
+    font-size: 40px;
 }
 
 /* INDEX PAGE END */
