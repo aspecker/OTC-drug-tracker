@@ -71,7 +71,7 @@ $('#searchBtn').on('click', async function() {
 			let pullData = [`${fdaMedId}^${brandName}^${genericName}^${activeIngredient}`];
 			// console.log(pullData);
 			$("#searchResults").append(
-				`<tr><td>${brandName}</td><td>${genericName}</td><td>${indications}</td><td>${activeIngredient}</td><td><a class="loginAnchor" href=""><button class="add-btn btn btn-danger btn-block" id="${key}" value='${pullData}'>Add</button></a></td></tr><`
+				`<tr><td>${brandName}</td><td>${genericName}</td><td>${indications}</td><td>${activeIngredient}</td><td><a class="loginAnchor"><button class="add-btn btn btn-danger btn-block" id="${key}" value='${pullData}'>Add</button></a></td></tr><`
 			);
 		});
 		check();

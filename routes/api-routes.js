@@ -3,7 +3,7 @@ const db = require("../models");
 const passport = require("../config/passport");
 
 module.exports = function(app) {
-
+	//DB ROUTES
 	// used to verify if user is logged in to prevent error when adding medicine
 	app.get("/api/check", (req, res) => {
 		res.send(req.user ? true : false)
