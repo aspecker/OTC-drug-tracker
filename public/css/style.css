@@ -56,6 +56,7 @@ body {
 
 /* INDEX PAGE END */
 
+/* MED PAGE START */
 .med-block{
     margin-bottom: 25px;
     padding: 0px 20px 0px 20px;
@@ -98,3 +99,4 @@ body {
     margin: 5px 0px 5px 0px;
     font-weight: 700;
 }
+/* MED PAGE END */

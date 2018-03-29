@@ -4,6 +4,7 @@ const passport = require("../config/passport");
 
 module.exports = function(app) {
 
+	// used to verify if user is logged in to prevent error when adding medicine
 	app.get("/api/check", (req, res) => {
 		res.send(req.user ? true : false)
 		return;
@@ -31,16 +32,17 @@ module.exports = function(app) {
 		}).then(response => res.send(response));
 	});
 	
-	//add a medicine to the database for a user
+	//add a medicine to the database for current user
 	app.post("/api/add", (req, res) => {
 		db.Med.create({
 			userId: req.user.id,
 			brandName: req.body.brand_name,
 			genericName: req.body.generic_name,
 			fdaMedId: req.body.id
-		}).then(() => console.log(`${req.user.id} has added medicine with NDC ${req.body.id} to database`))
+		}).then(() => console.log(`User ${req.user.id} has added medicine with NDC ${req.body.id} to database`))
 	});
 
+	// delete a medicine from the database for current user
 	app.delete('/api/meds/:id', (req, res) => {
 		db.Med.destroy({
 			where: {
