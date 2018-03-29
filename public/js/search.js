@@ -57,19 +57,16 @@ $('#searchBtn').on('click', async function() {
 	}).then((req, res) => {
 		$('.table').show();
 		let obj = req.results;
-		// let parsedData = [];
 		Object.keys(obj).forEach(function(key) {
 			let brandName = upperCase(obj[key].openfda.brand_name[0].toLowerCase());
 			let genericName = upperCase(obj[key].openfda.generic_name[0].toLowerCase());
 			let route = obj[key].openfda.route[0];
 			let indications = obj[key].indications_and_usage[0];
-			// let doseAdmin = obj[key].dosage_and_administration[0];
 			let activeIngredient = obj[key].active_ingredient[0];
 			let fdaMedId = obj[key].openfda.product_ndc[0];
 			let pullData = [`${fdaMedId}^${brandName}^${genericName}^${activeIngredient}`];
-			// console.log(pullData);
 			$("#searchResults").append(
-				`<tr><td>${brandName}</td><td>${genericName}</td><td>${indications}</td><td>${activeIngredient}</td><td><a class="loginAnchor"><button class="add-btn btn btn-danger btn-block" id="${key}" value='${pullData}'>Add</button></a></td></tr><`
+				`<tr><td><h4>${brandName}</h4></td><td>${genericName}</td><td>${indications}</td><td>${activeIngredient}</td><td><a class="loginAnchor"><button class="add-btn btn btn-danger btn-block" id="${key}" value='${pullData}'>Add</button></a></td></tr><`
 			);
 		});
 		check();

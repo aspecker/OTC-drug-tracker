@@ -58,6 +58,7 @@
     <div data-spy="scroll" data-target="#body" data-offset="0">
         <div class="container-fluid parallax-about">
             <h3 id="about">About Pill Pal</h3>
+<<<<<<< HEAD
 
                 <p class="index">
              Ever been asked by your doctor which drugs or vitamins you have been taking of recent and did not have an adequate answer? We have and its the last thing we want to have happen to you. And so, we created this app to help you search, track, and keep history of all the over the counter drugs you have taken in your recent history. You have the ability to create a profile and maintain a history of all the numerous drugs or vitamins you have been taking. Never again will you not be able to answer your doctor!
@@ -77,14 +78,23 @@
 
         </div>
 </div>
+=======
+                <p class="index"></p>
+        </div> {{! .parallax}}
 
-        <div class="container-fluid parallax-contact">
+        <div class="container-fluid parallax-guide">
+            <h3 id="howTo">Guide</h3>
+            <p class="index"></p>
+        </div> {{! Guide Div}}
+>>>>>>> f296537ae3a6395e387d05e2ae62da86a36a2942
+
+        <div class="container-fluid parallax-contact ">
             <h4 id="contact">Contact Us</h4>  
              <p>Health Junks LLC</p>
                <p>13 Apple Aday Drive Pillsville, MD 91313</p>
             
             <!-- Contact inputs -->
-            <form method="POST" action="https://formspree.io/pillpalposse@gmail.com">
+            <form class="login" loginmethod="POST" action="https://formspree.io/pillpalposse@gmail.com">
                 <div>
                     {{!-- <h4 class="text-teal">Name:</h4> --}}
                     <input type="text" name="name" placeholder="Name" class=" form-control">
