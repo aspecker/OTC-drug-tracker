@@ -17,6 +17,7 @@ const printInfo = (medId,btnType) =>{
     });
 };
 
+//WARNINGS
 //on click trigger for warning ajax call
 $('.warn-btn').click(function(){
     let medId = $(this).data('id');
@@ -38,6 +39,7 @@ const printWarn = (response)=>{
     $('.modal-body').append(brand,askDoc,doNotUse,warning,);
 };
 
+// MED INFO
 //info button on click to trigger the ajax call
 $('.med-btn').click(function(){
     let medId = $(this).data('id');
