@@ -1,122 +1,119 @@
 <nav class="navbar navbar-default navbar-fixed-top" id="nav-blue">
-    <div class="container-fluid">
-            
-        <a href="#" class="navbar-brand navbar-nav">
+  <div class="container-fluid">
+
+    <a href="#" class="navbar-brand navbar-nav">
         {{!-- icon --}}
             <i class="fas fa-pills fa-lg fa-spin" data-fa-transform="grow-5" style="color:#fff"></i>
-        </a>
+        </a>{{!-- LOGIN/LOGOUT DROPDOWN --}}
+    <ul class="nav navbar-nav">
+      <li class="dropdown">
+        <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Pill Pal <span class="caret"></span></a>
 
-        {{!-- LOGIN/LOGOUT DROPDOWN --}}
-        <ul class="nav navbar-nav">
-            <li class="dropdown">
-                <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Pill Pal <span class="caret"></span></a>
-                
-                <ul class="dropdown-menu">
-                    <li><a href="/meds">My Meds</a></li>
-                    <li><a href="/login">Login</a></li>
-                    <li><a class="nav-link" href="/logout">Logout</a></li>
-                </ul>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link blue" href="/search">Search</a>
-            </li>
+        <ul class="dropdown-menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/login">{{message}}</a></li>
+          {{#if isActive}}
+            <li><a class="nav-link" href="/logout">Logout</a></li>
+          {{else}}
+          {{/if}}
         </ul>
+      </li>
 
-        {{!-- navbar right --}}
-        <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item">
-                <a class="nav-link" href="/#about">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/#howTo">Guide</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/#contact">Contact</a>
-            </li>
-        </ul>
-    </div>
+      <li class="nav-item">
+        <a class="nav-link blue" href="/search">Search</a>
+      </li>
+    </ul>
+
+    {{!-- navbar right --}}
+    <ul class="nav navbar-nav navbar-right">
+      <li class="nav-item">
+        <a class="nav-link" href="/#about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#howTo">Guide</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./#contact">Contact</a>
+      </li>
+    </ul>
+  </div>
 </nav>
 
 {{!-- JUMBOTRON --}}
 <div class="jumbotron jumbotron-fluid vertical-center parallax-index">
-    <div class="container">
-        <h1 id="jumbo" class="animated flash">Pill Pal</h1>
-            <p class="">We track your health so you don't have to.</p>
-            <p>
-                <a class="btn btn-lg btn-index" href="/search" role="button">S E A R C H
+  <div class="container">
+    <h1 id="jumbo" class="animated flash">Pill Pal</h1>
+    <p class="">We track your health so you don't have to.</p>
+    <p>
+      <a class="btn btn-lg btn-index" href="/search" role="button">S E A R C H
                      {{!-- <i class="fas fa-search fa-lg" style="color:#fff"></i>   SEARCH MEDS --}}
                 </a>
-                <a class="btn btn-lg btn-index" href="/login" role="button">M Y &nbsp; P I L L &nbsp; P A L
+      <a class="btn btn-lg btn-index" href="/login" role="button">M Y &nbsp; P I L L &nbsp; P A L
                     {{!-- <i class="fas fa-user fa-lg" style="color:#fff"></i>   MY PILL PAL --}}
                 </a>
-            </p>
-    </div>
+    </p>
+  </div>
 </div>
 
 <div class="container-fluid" id="tall">
-    <div data-spy="scroll" data-target="#body" data-offset="0">
-        <div class="container-fluid parallax-about">
-            <h3 id="about">About Pill Pal</h3>
+  <div data-spy="scroll" data-target="#body" data-offset="0">
+    <div class="container-fluid parallax-about">
+      <h3 id="about">About Pill Pal</h3>
 
-                <p class="index">
-             Ever been asked by your doctor which drugs or vitamins you have been taking of recent and did not have an adequate answer? We have and its the last thing we want to have happen to you. And so, we created this app to help you search, track, and keep history of all the over the counter drugs you have taken in your recent history. You have the ability to create a profile and maintain a history of all the numerous drugs or vitamins you have been taking. Never again will you not be able to answer your doctor!
-                </p>
-            </div> {{! .parallax}}
+      <p class="index">
+        Ever been asked by your doctor which drugs or vitamins you have been taking of recent and did not have an adequate answer? We have and its the last thing we want to have happen to you. And so, we created this app to help you search, track, and keep history
+        of all the over the counter drugs you have taken in your recent history. You have the ability to create a profile and maintain a history of all the numerous drugs or vitamins you have been taking. Never again will you not be able to answer your
+        doctor!
+      </p>
+    </div> {{! .parallax}}
 
-        <div class="container-fluid parallax-guide">
-            <h3 id="howTo">Guide</h3>
-            <p class="index">Make an account and keep track of your pills today!</p>
-            <p class="index">Awesome! You are going to create an account and start to track your pills. This will be a journey like no other as your life is about to change. There will be no more embarassing moments with the doctor after they ask you what pills you are or have been taking recently. We can avoid this!
+    <div class="container-fluid parallax-guide">
+      <h3 id="howTo">Guide</h3>
+      <p class="index">Make an account and keep track of your pills today!</p>
+      <p class="index">Awesome! You are going to create an account and start to track your pills. This will be a journey like no other as your life is about to change. There will be no more embarassing moments with the doctor after they ask you what pills you are or have
+        been taking recently. We can avoid this! Lets get tracking! Please click the search buttons located in the center and top left of the page. You will be redirected to the page and will immediately be able to search for any over the counter drugs.
+        Upon finding a drug you would like to add, please click the add button. Voila! You have added a drug and can look at your current and past drug additions in the profile section. Thank you for using Drug Tracker and we hope you enjoy our website!
 
-            Lets get tracking! Please click the search buttons located in the center and top left of the page. You will be redirected to the page and will immediately be able to search for any over the counter drugs. Upon finding a drug you would like to add, please click the add button. Voila! You have added a drug and can look at your current and past drug additions in the profile section.
+      </p>
 
-            Thank you for using Drug Tracker and we hope you enjoy our website!
+    </div>
+  </div>
 
-            </p>
+  <div class="container-fluid parallax-contact">
+    <h4 id="contact">Contact Us</h4>
 
-        </div>
-</div>
+    <!-- Contact inputs -->
+    <form method="POST" action="https://formspree.io/pillpalposse@gmail.com">
+      <div>
+        {{!-- <h4 class="text-teal">Name:</h4> --}}
+        <input type="text" name="name" placeholder="Name" class=" form-control">
+      </div>
+      <br>
+      <div>
+        {{!-- <h4 class="text-teal">Email:</h4> --}}
+        <input type="text" name="email" placeholder="Email" class=" form-control">
+      </div>
+      <br>
+      <div>
+        {{!-- <h4 class="text-teal">Message:</h4> --}}
+        <textarea class="full-width form-control" name="message" cols="100" placeholder="Message" rows="5"></textarea>
+      </div>
+      <input type="hidden" name="_subject" value="from Pillpal" />
+      <br>
+      <!-- submit button -->
 
-        <div class="container-fluid parallax-contact">
-            <h4 id="contact">Contact Us</h4>  
-             <p>Health Junks LLC</p>
-               <p>13 Apple Aday Drive Pillsville, MD 91313</p>
-            
-            <!-- Contact inputs -->
-            <form method="POST" action="https://formspree.io/pillpalposse@gmail.com">
-                <div>
-                    {{!-- <h4 class="text-teal">Name:</h4> --}}
-                    <input type="text" name="name" placeholder="Name" class=" form-control">
-                </div>
-                <br>
-                <div>
-                    {{!-- <h4 class="text-teal">Email:</h4> --}}
-                    <input type="text" name="email" placeholder="Email" class=" form-control">
-                </div>
-                <br>
-                <div>
-                    {{!-- <h4 class="text-teal">Message:</h4> --}}
-                    <textarea class="full-width form-control" name="message" cols="100"  placeholder="Message" rows="5"></textarea>
-                </div>
-                <input type="hidden" name="_subject" value="from Pillpal"/>
-                <br>
-                <!-- submit button -->
-                <button class="btn btn-default btn-index">Submit</button>
-            </form>
-        <!-- End of Contact inputs -->
-         <p class="text-muted">DISCLAIMER</p>
-            <p>Drug Tracker is an open source project utilizing the Federal Drug Administration's application programming interface. Drug Tracker assumes no responsibility or liability for any errors or omissions in the content provided on this site.
-            </p>
-        </div> {{! Contact Div }}
-    </div> {{! Scroll Spy Div}}
+      <b class="text-center"><button class="btn btn-default btn-index">Submit</button></b>
+    </form>
+    <!-- End of Contact inputs -->
+
+  </div> {{! Contact Div }}
+  <div class="alert alert-info" role="alert">
+    <small class="text-muted">DISCLAIMER</small>
+    <p>Drug Tracker is an open source project utilizing the Federal Drug Administration's application programming interface. Drug Tracker assumes no responsibility or liability for any errors or omissions in the content provided on this site.
+    </p>
+  </div>
+</div> {{! Scroll Spy Div}}
 </div> {{! Container-fluid Div}}
 
-           
-        
-      {{!  </div>}}
-    {{!-- close container div  --}}
-    {{!</div>}}
-{{!-- close parallax indep div --}}
-</div>
 
+</div>

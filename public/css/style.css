@@ -1,344 +1,406 @@
 /* MAIN  */
 
 body {
-    margin-top: 50px;
+  margin-top: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 /* for all borders */
+
 * {
-    border-radius: 0 !important;
-  }
+  border-radius: 0 !important;
+}
 
-
-#tall { /* for container div */
-    min-height: 800px;
+#tall {
+  /* for container div */
+  min-height: 800px;
 }
 
 /* nav bar */
+
 .navbar-default .navbar-nav>li>a {
-    color: #fff;
-    font-size: 15px; 
+  color: #fff;
+  font-size: 15px;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
-    color: #f5b8d3;
-    font-weight: bolder;
+  color: #f5b8d3;
+  font-weight: bolder;
 }
 
 .dropdown-menu>li>a {
-    background: #105dfb;
-    color: #fff;
+  background: #105dfb;
+  color: #fff;
+}
+
+ul.dropdown-menu {
+  background: #105dfb;
 }
 
 #nav-blue {
-    background-color: #105dfb;
-    color: #fff;
-    border-bottom-color: #105dfb;
+  background-color: #105dfb;
+  color: #fff;
+  border-bottom-color: #105dfb;
 }
 
 .footer {
-    background: #105dfb;
-    color: #fff;
-    text-align: center;
-    vertical-align: middle;
-    height: 50px;
+  background: #105dfb;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  height: 50px;
 }
 
 .footer-text {
-    color: #fff;
-    vertical-align: middle;
-    margin-top: 15px;
+  color: #fff;
+  vertical-align: middle;
+  margin-top: 15px;
 }
 
 /* INDEX PAGE */
+
 /* --------------------------------------------- */
+
 .jumbotron {
-    color: #105dfb;
-    text-align: center;
+  color: #105dfb;
+  text-align: center;
 }
 
 /* centering jumbotron */
+
 .vertical-center {
-    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-    min-height: 100vh; /* These two lines are counted as one :-)       */
-    display: flex;
-    align-items: center;
-  }
+  min-height: 100%;
+  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh;
+  /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
+}
 
 /* h1 in jumbotron */
+
 #jumbo {
-    font-size: 100px;
+  font-size: 100px;
 }
 
 .parallax-index {
-    background-image: url("../assets/jumbotron.svg");
-    height: auto;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-image: url("../assets/jumbotron.svg");
+  height: auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .parallax-about {
-    background-image: url("../assets/whitesparkle.svg");
-    height: 700px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #f9e2e1;
-    /* background: #eee; */
-    /* width: 80%; */
-    /* margin */
+  background-image: url("../assets/whitesparkle.svg");
+  height: 700px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f9e2e1;
+  /* background: #eee; */
+  /* width: 80%; */
+  /* margin */
 }
 
 .parallax-guide {
-    background-image: url("../assets/pink-pills.svg");
-    height: auto;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #eee;
-    color: #000;
+  background-image: url("../assets/pink-pills.svg");
+  height: auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #eee;
+  color: #000;
 }
 
 .parallax-contact {
-    background-image: url("../assets/white1.png");
-    height: auto;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background: #eee;
-    margin-bottom: 50px;
+  text-align: center;
+  background-image: url("../assets/white1.png");
+  height: auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: #eee;
+  margin-bottom: 50px;
 }
 
 p.index {
-    margin: 100px;
-    font-size: 18px;
-    line-height: 150%;
+  margin: 100px;
+  font-size: 18px;
+  line-height: 150%;
 }
 
 /* blue container background */
-.container-blue {
-    background: #105dfb;
-    /* padding: 100px; */
 
+.container-blue {
+  background: #105dfb;
+  /* padding: 100px; */
 }
 
 #howTo {
-    color: #105dfb;
-    font-size: 50px;
-    padding-top: 50px;
-    padding-bottom: 30px;
-    text-align: center;
+  color: #105dfb;
+  font-size: 50px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  text-align: center;
 }
 
 #contact {
-    color: #105dfb;
-    font-size: 50px;
-    padding-top: 50px;
-    padding-bottom: 30px;
-    text-align: center;
+  color: #105dfb;
+  font-size: 50px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  text-align: center;
 }
 
 /* h3 header in container */
+
 #about {
-    color: #105dfb;
-    font-size: 50px;
-    padding-top: 50px;
-    padding-bottom: 30px;
-    text-align: center;
+  color: #105dfb;
+  font-size: 50px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  text-align: center;
 }
 
 .btn-index {
-    width: 30%;
-    border-color: #105dfb;
-    color: #105dfb;
-    border-width: 3px;
-    /* margin-bottom: 10px; */
-    text-align: center;
-    margin: 0px auto;
-    text-align: center;
-    background: #eee;
-    font-size: 15px;
-    /* background: #105dfb; */
+  al align-self: center;
+  width: 30%;
+  border-color: #105dfb;
+  color: #105dfb;
+  border-width: 3px;
+  /* margin-bottom: 10px; */
+  text-align: center;
+  margin: 0px auto;
+  background: #eee;
+  font-size: 15px;
+  /* background: #105dfb; */
 }
 
+form.login {
+  margin-top: 30px;
+}
 
 /* INDEX PAGE END */
 
 /* ------------------------------------------------- */
+
 /* LOGIN PAGE */
 
 /* background color */
+
 .container-login {
-    background-color: #eee;
-    color: #105dfb;
+  color: #105dfb;
 }
 
-.login {
-    margin-top: 150px;
-    text-align: center;
-} 
+.login, .signup {
+  margin-top: 150px;
+  text-align: center;
+}
 
-.login h1 {
-    font-size: 25px;
+.login h1, .signuph1 {
+  font-size: 25px;
 }
 
 /* form input */
+
 .form-control {
-    width: 70%;
-    margin: 0px auto;
-    border-color:#105dfb;
-    border-width:  3px;
-    color: #105dfb;
-    background: #eee;    
+  width: 70%;
+  margin: 0px auto;
+  border-color: #105dfb;
+  border-width: 3px;
+  color: #105dfb;
+  background: #eee;
 }
 
 /* login button */
+
 .btn-login {
-    width: 30%;
-    border-color: #105dfb;
-    color: #eee;
-    border-width: 3px;
-    /* margin-bottom: 10px; */
-    text-align: center;
-    margin: 0px auto;
-    text-align: center;
-    background: #105dfb;
-    font-size: 15px;
-   
+  width: 30%;
+  border-color: #105dfb;
+  color: #eee;
+  border-width: 3px;
+  /* margin-bottom: 10px; */
+  text-align: center;
+  margin: 0px auto;
+  background: #105dfb;
+  font-size: 15px;
 }
 
 a.btn.btn-default.btn-login>a:hover {
-    font-size: 18px;
-    color: #093389;
+  font-size: 18px;
+  color: #093389;
 }
 
 /* p class  */
+
 .login-center {
-    text-align: center;
+  text-align: center;
 }
 
 .log-sign {
-    margin-top: 100px;
-    margin-bottom: 100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 /* END LOGIN */
+
 /* ----------------------------------------- */
 
 /* SIGNUP PAGE */
 
 /* signup input */
+
 .signup {
-    width: 70%;
-    margin: 0px auto;
-    border-color:#105dfb;
-    border-width:  3px;
-    color: #105dfb;
-    background: #eee;
-    padding-top: 100px;
+  width: 70%;
+  margin: 0px auto;
+  border-color: #105dfb;
+  border-width: 3px;
+  color: #105dfb;
+  /* background: #eee; */
+  padding-top: 100px;
 }
 
 /* END SIGNUP */
 
-
 /* SEARCH PAGE */
 
+.form-search {
+  width: 100%;
+}
+
 .table {
-    width: 100%;
-    margin: 0 auto;
-    padding-right: 10px;
-    padding-left: 10px;
+  display: none;
+}
+
+.table-striped {
+  width: 100%;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: center;
+  margin-bottom: 100px;
 }
 
 th {
-    color: #105dfb;
-    border: 1px solid #105dfb;
-    text-align: center;
+  color: #105dfb;
+  border: 1px solid #105dfb;
+  text-align: center;
 }
 
 td {
-    padding: 10px;
+  padding: 10px;
+}
+
+#fdaSearch {
+  background-color: #f5f5f5;
 }
 
 /* search input column */
+
 .search-input {
-    background: #fff;
-    text-align: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    color: #105dfb;
+  background-image: url('/assets/greyzz.png');
+  border-radius: 10px;
+  text-align: center;
+  /* padnding-top: 100px; */
+  margin-bottom: 100px;
+  color: #105dfb;
 }
 
 .search-table {
-    background: #fff;
+  background: #fff;
 }
 
-/* search input */
-#fdaSearch {
-    width: 80%;
+.btn-submit {
+  /* width: 30%; */
+  border-color: #105dfb;
+  color: #eee;
+  border-width: 3px;
+  /* margin-bottom: 10px; */
+  text-align: center;
+  margin: 0px auto;
+  background: #105dfb;
+  font-size: 15px;
 }
 
 .btn-search {
-    width: auto;
-    border: #105dfb;
+  width: auto;
+  border: #105dfb;
 }
 
-
 #title {
-    margin-bottom: 20px;
-    font-size: 40px;
+  margin-bottom: 20px;
+  font-size: 40px;
 }
 
 /* INDEX PAGE END */
 
 /* MED PAGE START */
-.med-block{
-    margin-bottom: 25px;
-    padding: 0px 20px 0px 20px;
-    padding-bottom: 10px;
-    /* margin-right: 20px; */
-    line-height: 1.6em;
-    border: 2px solid lightslategray;
-    border-radius: 10px;
-    background-color: #f5f5f5;
+
+.med-block {
+  margin-bottom: 25px;
+  padding: 0px 20px 0px 20px;
+  padding-bottom: 10px;
+  /* margin-right: 20px; */
+  line-height: 1.6em;
+  border: 2px solid lightslategray;
+  border-radius: 10px;
+  background-color: #f5f5f5;
 }
-.med-head{
-    text-align: center;
-    margin: 20px 0px 40px 0px;
-    background-color: #105dfb;
-    color: #fff;
-    padding: 10px 0px 10px 0px;
-    font-weight: 500;
-    border-radius: 10px;
-    border: 2px solid #fff;
+
+.med-head {
+  text-align: center;
+  margin: 20px 0px 40px 0px;
+  background-color: #105dfb;
+  color: #fff;
+  padding: 10px 0px 10px 0px;
+  font-weight: 500;
+  border-radius: 10px;
+  border: 2px solid #fff;
 }
-.med-name{
-    text-align: center;
+
+.med-name {
+  text-align: center;
 }
-.retire-btn{
-    background-color: #448aff;
+
+.retire-btn {
+  background-color: #448aff;
 }
-.med-btn, .warn-btn{
-    background-color: #0d47a1;
+
+.med-btn, .warn-btn {
+  background-color: #0d47a1;
 }
-.med-date{
-    text-align: center;
-    font-style: italic;
+
+.med-date {
+  text-align: center;
+  font-style: italic;
 }
-.btn-row{
-    align-content: center;
-    justify-content: center;
+
+.btn-row {
+  align-content: center;
+  justify-content: center;
 }
-.info{
-    width: 100%;
-    margin: 5px 0px 5px 0px;
-    font-weight: 700;
+
+.info {
+  width: 100%;
+  margin: 5px 0px 5px 0px;
+  font-weight: 700;
 }
+
 /* MED PAGE END */
-/* INDEX PAGE END */
 
 /* text color for login error messages - class in login.handlebars */
+
 .message {
-    color: red;
-  }
+  color: red;
+}
+
+#error {
+  color: red;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.wrapper {
+  background-image: url('/assets/greyzz.png')
+}
