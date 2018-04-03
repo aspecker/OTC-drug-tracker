@@ -6,22 +6,23 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 module.exports = function(app) {
 	const checkUser = (req) => {
 		if (!req.user) {
-			let data = {
+			return {
 				"active": false,
 				"message": "Sign In"
 			}
-			return data;
-		};
-		return {
-			"active": true,
-			"message": req.user.email
-		};
+		} else {
+
+			return {
+				"active": true,
+				"message": req.user.email
+			};
+		}
 	}
 
 	// renders index on root
 	app.get("/", function(req, res) {
 		res.render("index", {
-      isActive: checkUser(req).active,
+			isActive: checkUser(req).active,
 			message: checkUser(req).message
 		});
 	});
@@ -32,17 +33,16 @@ module.exports = function(app) {
 			return res.redirect("/meds");
 		} else {
 			res.render("login", {
-        isActive: checkUser(req).active,
-  			message: checkUser(req).message
+				isActive: checkUser(req).active,
+				message: checkUser(req).message
 			});
 		}
 	});
 
 	// signup page route
 	app.get('/signup', (req, res) => {
-		console.log(checkUser(req))
 		res.render('signup', {
-      isActive: checkUser(req).active,
+			isActive: checkUser(req).active,
 			message: checkUser(req).message
 		})
 	})
@@ -67,7 +67,7 @@ module.exports = function(app) {
 	// search page route
 	app.get('/search', function(req, res) {
 		res.render('search', {
-      isActive: checkUser(req).active,
+			isActive: checkUser(req).active,
 			message: checkUser(req).message
 		})
 	})
