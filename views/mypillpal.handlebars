@@ -1,78 +1,91 @@
 {{!-- NAV BAR --}}
-<nav class="navbar navbar-default navbar-fixed-top" id="nav-blue">
-  <div class="container-fluid">
+<div class='wrapper'>
+  <nav class="navbar navbar-default navbar-fixed-top" id="nav-blue">
+    <div class="container-fluid">
 
-    {{!-- logo --}}
-    <a href="/" class="navbar-brand navbar-nav">
+      {{!-- logo --}}
+      <a href="/" class="navbar-brand navbar-nav">
         {{!-- icon --}}
         <i class="fas fa-pills fa-lg fa-spin" data-fa-transform="grow-5" style="color:#fff"></i>
     </a>{{!-- login/logout dropdown --}}
-    <ul class="nav navbar-nav">
-      <li class="dropdown">
-        <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Pill Pal <span class="caret"></span></a>
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Pill Pal <span class="caret"></span></a>
 
-        <ul class="dropdown-menu">
-          <li><a href="/">Home</a></li>
-          <li><a href="/login">{{message}}</a></li>
-          {{#if isActive}}
-            <li><a class="nav-link" href="/logout">Logout</a></li>
-          {{else}}
+          <ul class="dropdown-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/login">{{message}}</a></li>
+            {{#if isActive}}
+              <li><a class="nav-link" href="/logout">Logout</a></li>
+            {{else}}
+            {{/if}}
+          </ul>
+        </li>
+        {{!-- SEARCH --}}
+        <li class="nav-item">
+          <a class="nav-link blue" href="/search">Search</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container medPage" id='tall'>
+    <!-- row 1 -->
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class='med-head'>Currently Taking</h2>
+        {{#each meds}}
+          {{#if isTaking}}
+            {{>meds/meds-block}}
           {{/if}}
-        </ul>
-      </li>
-      {{!-- SEARCH --}}
-      <li class="nav-item">
-        <a class="nav-link blue" href="/search">Search</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+        {{/each}}
+      </div>
 
-<div class="container">
-  <!-- row 1 -->
-  <div class="row">
-    <div class="col-md-6">
-      <h2 class='med-head'>Currently Taking</h2>
-      {{#each meds}}
-        {{#if isTaking}}
-          {{>meds/meds-block}}
-        {{/if}}
-      {{/each}}
+      <div class="col-md-6">
+        <h2 class='med-head'>History</h2>
+        {{#each meds}}
+          {{#unless isTaking}}
+            {{>meds/history-block}}
+          {{/unless}}
+        {{/each}}
+        <br>
+      </div>
+
     </div>
+    <!-- end row 1 -->
 
-    <div class="col-md-6">
-      <h2 class='med-head'>History</h2>
-      {{#each meds}}
-        {{#unless isTaking}}
-          {{>meds/history-block}}
-        {{/unless}}
-      {{/each}}
-      <br>
-    </div>
+    <!-- modal windows -->
+    <div class="modal fade" id="warning" role="dialog">
+      <div class="modal-dialog">
+        <!-- modal content -->
+        <div class="modal-content">
+          <!-- modal header -->
+          <div class="modal-header">
+            <h4 class="modal-title"></h4>
+          </div>
+          <!-- modal body -->
+          <div class="modal-body">
 
-  </div>
-  <!-- end row 1 -->
-
-  <!-- modal windows -->
-  <div class="modal fade" id="warning" role="dialog">
-    <div class="modal-dialog">
-      <!-- modal content -->
-      <div class="modal-content">
-        <!-- modal header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Warnings</h4>
-        </div>
-        <!-- modal body -->
-        <div class="modal-body">
-
-        </div>
-        <!-- modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default btn-primary close-button" data-dismiss="modal">Okay</button>
+          </div>
+          <!-- modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default btn-primary close-button" data-dismiss="modal">Okay</button>
+          </div>
         </div>
       </div>
     </div>
+    <!-- modal body -->
+    <div class="modal-body">
+
+    </div>
+    <!-- modal footer -->
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default btn-primary close-button" data-dismiss="modal">Okay</button>
+    </div>
   </div>
+</div>
+</div>
+
 
 
 
@@ -81,3 +94,5 @@
 
 </div>
 <!-- container div -->
+</div>
+<!-- wrapper end-->

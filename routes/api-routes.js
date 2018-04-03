@@ -3,7 +3,7 @@ const db = require("../models");
 const passport = require("../config/passport");
 
 module.exports = function(app) {
-
+	//DB ROUTES
 	// used to verify if user is logged in to prevent error when adding medicine
 	app.get("/api/check", (req, res) => {
 		res.send(req.user ? true : false)
@@ -55,13 +55,7 @@ module.exports = function(app) {
 		})
 	})
 
-	// //AUTH ROUTES
-	// //local login
-	// app.post("/api/login", passport.authenticate("local"), (req, res) => {
-	// 	res.redirect("/search");
-	// });
 
-	//local signup
 //PASSPORT LOGIN
 app.post('/api/login', function(req, res, next) {
     passport.authenticate('local', function (err, user, info) {

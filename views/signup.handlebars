@@ -1,54 +1,55 @@
-{{!-- NAV BAR --}}
-<nav class="navbar navbar-default navbar-fixed-top" id="nav-blue">
-  <div class="container-fluid">
+<div class='wrapper'>
+  {{!-- NAV BAR --}}
+  <nav class="navbar navbar-default navbar-fixed-top" id="nav-blue">
+    <div class="container-fluid">
 
-    {{!-- logo --}}
-    <a href="/" class="navbar-brand navbar-nav">
+      {{!-- logo --}}
+      <a href="/" class="navbar-brand navbar-nav">
         {{!-- icon --}}
         <i class="fas fa-pills fa-lg fa-spin" data-fa-transform="grow-5" style="color:#fff"></i>
     </a>{{!-- login/logout dropdown --}}
-    <ul class="nav navbar-nav">
-      <li class="dropdown">
-        <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Pill Pal <span class="caret"></span></a>
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Pill Pal <span class="caret"></span></a>
 
-        <ul class="dropdown-menu">
-          <li><a href="/">Home</a></li>
-          <li><a href="/login">{{message}}</a></li>
-          {{#if isActive}}
-            <li><a class="nav-link" href="/logout">Logout</a></li>
-          {{else}}
-          {{/if}}
-        </ul>
-      </li>
-      {{!-- SEARCH --}}
-      <li class="nav-item">
-        <a class="nav-link blue" href="/search">Search</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+          <ul class="dropdown-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/login">{{message}}</a></li>
+            {{#if isActive}}
+              <li><a class="nav-link" href="/logout">Logout</a></li>
+            {{else}}
+            {{/if}}
+          </ul>
+        </li>
+        {{!-- SEARCH --}}
+        <li class="nav-item">
+          <a class="nav-link blue" href="/search">Search</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-{{!-- MAIN CONTENT --}}
-<div class="container-fluid container-login" id="tall">
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3 log-sign">
+  {{!-- MAIN CONTENT --}}
+  <div class="container-fluid container-login" id="tall">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 log-sign">
 
-      <form class="signup">
-        <h1 id="about">Welcome to Pill Pal!</h1>
-        <h3>Create your account</h3>
-        <h4 id="loginMessage" class="message"></h4>
-        <div class="form-group">
-          {{!-- <label for="exampleInputEmail1">Email address</label> --}}
-          <input type="email" class="form-control" id="email-input" placeholder="Email">
-        </div>
+        <form class="signup">
+          <h1 id="about">Welcome to Pill Pal!</h1>
+          <h3>Create your account</h3>
+          <h4 id="loginMessage" class="message"></h4>
+          <div class="form-group">
+            {{!-- <label for="exampleInputEmail1">Email address</label> --}}
+            <input type="email" class="form-control" id="email-input" placeholder="Email">
+          </div>
 
-        <div class="form-group">
-          {{!-- <label for="exampleInputPassword1">Password</label> --}}
-          <input type="password" class="form-control" id="password-input" placeholder="Password">
-        </div>
-        <button type="submit" class="btn btn-default btn-login">Sign Up</button>
-      </form>
+          <div class="form-group">
+            {{!-- <label for="exampleInputPassword1">Password</label> --}}
+            <input type="password" class="form-control" id="password-input" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-default btn-login">Sign Up</button>
+        </form>
 
+      </div>
     </div>
   </div>
-</div>

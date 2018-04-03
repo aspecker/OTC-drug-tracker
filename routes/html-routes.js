@@ -5,7 +5,6 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function(app) {
 	const checkUser = (req) => {
-		const isSignedOn = req.user ? true : false;
 		if (!req.user) {
 			let data = {
 				"active": false,
