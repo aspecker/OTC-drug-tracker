@@ -57,8 +57,8 @@ module.exports = function(app) {
 		}).then(results => {
 			// renders user meds using handlebars partial
 			res.render('meds', {
-				isActive: checkUser(req).active,
-				message: checkUser(req).message,
+				// isActive: checkUser(req).active,
+				// message: checkUser(req).message,
 				meds: results
 			});
 		});
