@@ -20,7 +20,7 @@ People young and old whether they take large or small amounts of medicines, need
     * Keep track of their OTC medication use, with easy access to information about those drugs
         * Profile page with two seperate data sets of active and historical medicines taken
         * Medications set to active or inactive, with data logged based on time of administration by user
-    * User will hahve ability to Search the open FDA api for a particular medicine with information about it:
+    * User will have ability to Search the open FDA api for a particular medicine with information about it:
     
     * Brand Name
     * Generic Name

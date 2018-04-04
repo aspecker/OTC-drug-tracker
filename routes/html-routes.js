@@ -56,7 +56,7 @@ module.exports = function(app) {
 			}
 		}).then(results => {
 			// renders user meds using handlebars partial
-			res.render('mypillpal', {
+			res.render('meds', {
 				isActive: checkUser(req).active,
 				message: checkUser(req).message,
 				meds: results
