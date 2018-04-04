@@ -8,7 +8,7 @@ module.exports = function(app) {
 		if (!req.user) {
 			return {
 				"active": false,
-				"message": "Sign In"
+				"message": "Log In"
 			}
 		} else {
 
