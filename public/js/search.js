@@ -51,11 +51,11 @@ $('#searchBtn').on('click', async function() {
 		url: `https://api.fda.gov/drug/label.json?search=openfda.product_type:otc+AND+brand_name:${searchTerm}&limit=5`,
 		type: 'GET',
 		error: (xhr, ajaxOptions, thrownError) => {
-			if (xhr.status == 404) {
+			if (xhr.status === 404 ||xhr.status === 400) {
 				$('.table').hide();
 				return $("#error").html("Drug not found, please check spelling")
 			}
-			if (xhr.status == 500) {
+			if (xhr.status === 500) {
 				return $("#error").html("Whoops! Something's wrong on our end. Please try again.")
 			}
 		}
