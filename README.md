@@ -1,4 +1,4 @@
-# OTC-drug-tracker
+# Med Trax
 
 ## Group Project #3 for GWU Bootcamp March 2018
 ### Chandler Dibble, Nicole Yoon, Al Curry, Tim Hill, Adam Specker
@@ -6,7 +6,7 @@
 # Overview
 An application built to help consumers find and keep track of over-the-counter drugs they currently use and have taken.
 
-**Please visit out application here: http://pill-pal-pro.herokuapp.com
+**Please visit out application here: http://med-trax.herokuapp.com
 
 **Real World Problem:
 
