@@ -1,6 +1,5 @@
 # Med Trax
 
-## Group Project #3 for GWU Bootcamp March 2018
 ### Chandler Dibble, Nicole Yoon, Al Curry, Tim Hill, Adam Specker
 
 # Overview
