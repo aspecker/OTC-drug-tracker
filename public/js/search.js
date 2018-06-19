@@ -48,7 +48,7 @@ $('#searchBtn').on('click', async function() {
 	$("#error").empty();
 	let searchTerm = $('#fdaSearch').val();
 	$.ajax({
-		url: `https://api.fda.gov/drug/label.json?search=openfda.product_type:otc+AND+brand_name:${searchTerm}&limit=5`,
+		url: `https://api.fda.gov/drug/label.json?search=openfda.product_type:otc+AND+openfda.brand_name:${searchTerm}&limit=5`,
 		type: 'GET',
 		error: (xhr, ajaxOptions, thrownError) => {
 			if (xhr.status === 404 ||xhr.status === 400) {
